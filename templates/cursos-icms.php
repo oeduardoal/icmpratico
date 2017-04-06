@@ -3,14 +3,15 @@
 		<h1><b>CURSOS</b> ICMS PRÁTICO</h1>
 	</header>
 		<div class="row" id="slider-cursos">
-			<?php $argsc = array('post_type' => 'curso', 'posts_per_page' => 10); ?>
+			<?php $argsc = array('post_type' => 'curso', 'posts_per_page' => 4); ?>
 			<?php $cursos = new WP_Query($argsc); ?>
 			<?php
 				while($cursos->have_posts()):
 				$cursos->the_post();
 			?>
-				<a href="<?php the_permalink(); ?>">
 				<article class="columns item">
+					<a href="<?php the_permalink(); ?>">
+
 					<div class="left">
 						<label class="periodo">Periodo</label>
 						<label class="data"><?php the_field('periodo') ?> </label>
@@ -30,8 +31,8 @@
 							<button class="button button-azul">MAIS INFORMAÇÕES</button>
 						</a>
 					</div>
-				</article>
 				</a>
+				</article>
 		<?php endwhile; ?>
 		<?php wp_reset_postdata(); ?>
 

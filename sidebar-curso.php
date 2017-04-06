@@ -1,6 +1,6 @@
 <section id="widgets" class="large-4 float-right" style="position: relative;">
 
-	<a href="<?php echo get_field('url_ead') ?>" id="inscrever" class="large-12 columns no-padding inscrever">CLIQUE AQUI E SE INSCREVA</a>
+	<a href="<?php echo get_field('url_ead') ?>" target="_blank" id="inscrever" class="large-12 columns no-padding inscrever">CLIQUE AQUI E SE INSCREVA</a>
 
 	<?php if(get_field('publico_alvo')): ?>
 	<section class="large-12 columns widget widget-cursos no-padding" >
@@ -50,7 +50,6 @@
 		</main>
 	</section>
 	<?php endif; ?>
-	<a href="<?php echo get_field('url_ead') ?>" id="inscrever" class="large-12 columns no-padding inscrever">CLIQUE AQUI E SE INSCREVA</a>
 	<section class="large-12 columns widget widget-cursos" >
 				<header >
 					<h6 class="text-left">Cursos com Inscrições Abertas</h6>

@@ -19,8 +19,8 @@
 				while($noticias->have_posts()):
 				$noticias->the_post();
 			?>
-				<a href="<?php the_permalink(); ?>">
 					<div class="article-item">
+				<a href="<?php the_permalink(); ?>">
 						<?php if(has_post_thumbnail()): ?>
 						<div class="imageresize left" style="background-image: url(<?php the_post_thumbnail_url('full'); ?>);"></div>
 						<?php else: ?>
@@ -44,8 +44,8 @@
 									LEIA MAIS
 								</button>
 							</a>
-					</div>
 				</a>
+					</div>
 			<?php endwhile; ?>
 	<?php wp_reset_postdata(); ?>
 			

@@ -15,7 +15,7 @@
 				items:2,
 				pagination: false,
 				slideSpeed: 500,
-				autoPlay: 3000,
+				autoPlay: 2500,
 			});
 			$('.slider-parceiros').owlCarousel({
 				items:5,
