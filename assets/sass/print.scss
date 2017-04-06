@@ -1,0 +1,35 @@
+
+@media print {
+	// Sub Header
+	#subheader{display: none;}
+
+	// Header
+	#header{
+		#logo-icms{
+			width: 100%;
+			text-align: center;
+		}
+		#header-main{display: none;}
+	}
+
+	// Widgets
+	#widgets{display: none;}
+	
+	// Search
+	#search{display: none;}
+
+	// Breadcumbres
+	#breadcrumbs{display: none;}
+
+	// Print{
+	.print{
+		display: none;
+	}
+	// Links
+	*, a:link:after, a:visited:after {
+		content: "" !important;
+	}
+
+	// Footer
+	footer{display: none;}
+}

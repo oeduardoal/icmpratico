@@ -1,0 +1,97 @@
+@import 'styles';
+
+#depoimentos{
+	// Margins
+	margin-top: 30px;
+	background-color: $azulclaro;
+	padding-top: 2rem;
+	position: relative;
+	.btn-nav{
+		top: 11rem;
+	}
+	// Header
+	header > h1{
+		font-size: 30px;
+		position: relative;
+		text-align: center;
+		font-family: "Roboto";
+	}
+	header > h1:after{
+		@include linesh1($azul);
+		right: 22%;
+	}
+	header > h1:before{
+		@include linesh1($azul);
+		left: 22%;
+	}
+	.articles{
+		width: 80%;
+		margin: 0 auto;
+		font-family: "Raleway";
+		margin-top: 2rem;
+	}
+	.item{
+		background-color: #fff;
+		padding: 1rem;
+		width: calc(100% - 10px);
+	}
+	.owl-item:nth-child(2n+3){
+		margin-right: 10px;
+	}
+	article{
+		.aspas{
+			@include imageresize();
+			background-image: url(../img/aspas.png);
+			height: 2.2rem;
+			width: 2.7rem;
+			float: left;
+			margin-bottom: 10rem;
+			margin-right: 1rem;
+			position: absolute;
+		}
+		main{
+			min-height: 5rem;
+			p{
+				padding: 0rem 0rem 0 3.5rem;
+				color: #1d1d1d;
+				padding-bottom: 1rem;
+			}
+		}
+		footer{
+			width: 100%;
+			margin-top: -1rem;
+			float:left;
+			img{
+				float: left;
+				border: solid 5px #FFF;
+				border-radius: 50%;
+				width: 5rem;
+				margin-right: 10px;
+			}
+			label{
+				font-weight: bold;
+				font-size: 15px;
+				margin-top: 2rem;
+				margin-bottom: -7px;
+			}
+			span{
+				color: #595959;
+				font-size: 15px;
+			}
+		}
+	}
+> footer{
+		margin-top: 3rem;
+		text-align: center;
+		padding-bottom: 1rem;
+		button{
+			font-family: "Raleway";
+			@include button-outline(#b5babf);
+			color: #606163;
+			font-style: italic;
+		}
+		button:hover{
+			@include button-outlineh();
+		}
+	}	
+}

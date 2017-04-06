@@ -1,0 +1,73 @@
+@import 'styles';
+
+.imageresize.left{
+	height: 14.25rem;
+	background-repeat: no-repeat;
+}
+
+#legislacoes{
+	margin-top: 80px;
+	.left{
+		width: calc(40% - 10px);
+		float: left;
+		margin-right: 10px;
+	}
+	.right{
+		float: right;
+		width: calc(60% - 10px);
+		min-height: 14.25rem;
+		margin-right: 10px;
+		padding: 1rem 1rem 0 1rem;
+		background-color: #e1e8ee;
+		header{
+			h2{
+				font-size: 16px;
+				color: #000;
+				font-weight: 600;
+				text-transform: uppercase;
+				padding-bottom: .2rem;
+				border-bottom: dashed 2px #b1b1b1;
+				display: block;
+			}
+		}
+		main{
+			p{
+				font-size: 14px;
+				color: #393939;
+			}
+		}
+		footer{
+			button{
+				background-color: $azul;
+				padding: .6rem 1rem;
+			}
+			button:hover{
+				background: $azulh;
+			}
+		}
+	}
+	
+	// Header
+	header > h1{
+		font-size: 30px;
+		position: relative;
+		text-align: center;
+		font-weight: 600;
+	}
+	header > h1:after{
+		@include linesh1($azul);
+		right: 25%;
+	}
+	header > h1:before{
+		@include linesh1($azul);
+		left: 25%;
+	}
+
+	// article
+	article{
+		margin-top: 10px;
+	}
+	> footer{
+		text-align: center;
+	}
+}

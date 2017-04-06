@@ -1,0 +1,322 @@
+$cinza: #e5e5e5;
+$cinzah: #cacaca;
+$azul: #007abb;
+$azulh: #01619e;
+$amarelo: #fac227;
+$cinzap: #5d5d5d;
+$azulclaro: #e1e8ee;
+::-moz-selection {background: $azul;color: #fff;}
+::selection{background: $azul;color: #fff;}
+body{background-color: 	#FFF;}
+a,a:hover,p, span{color: #252525;font-size: 16px;}
+.pace .pace-progress{height: 3px;}
+	.button-amarelo{
+		margin-top: 2rem;
+		text-align: center;
+		background-color: $amarelo;
+		color: #000;
+	}
+	.button-amarelo:hover{
+		color: #FFF;
+		background-color: $azulh;
+	}
+	.fixed-widgets{
+		position: fixed !important;
+		right: 0;
+		top: 0;
+	}
+
+@mixin linesh1($color){
+	content: "";
+	width: 130px;
+	height: 5px;
+	position: absolute;
+	bottom: 20px;
+	background-color: $color;
+}
+// reset foundation
+input,input:hover,input:active,input:focus{box-shadow: none !important;border: none !important;}
+
+@mixin btn-outline{
+	background-color: transparent;
+	border: solid 1px #000;
+}
+@mixin btnoutline($color){
+	background-color: $color;
+	border: solid 1px #000;
+	color: #fff;
+}
+@mixin transition() {
+	-webkit-transition: all .15s ease-in-out;
+	-moz-transition: all .15s ease-in-out;
+	-ms-transition: all .15s ease-in-out;
+	-o-transition: all .15s ease-in-out;
+	transition: all .15s ease-in-out;
+}
+@mixin borderr(){
+	border-right: solid 1px $cinzah;
+	// margin-right: -1px;
+
+}
+
+
+
+#subheader{
+	background-color: #e5e5e5;
+	font-family: "Raleway";
+	text-align: left;
+	.row{
+		section:nth-child(1){
+			margin: .6rem 0rem;
+		}	
+	}
+	nav.submenu > ul{
+		list-style: none;
+		text-align: right;
+		margin: 0px;
+	}
+	nav.submenu > ul > li{
+		display: inline-block;
+		padding: .6rem;
+		margin-right: -6px;
+		@include transition();
+		border-right: solid 1px $cinzah;
+	}
+	nav.submenu > ul > li > a{
+		padding: .6rem 0rem;
+		color: inherit;
+	}
+	nav.submenu > ul > li:last-child{
+		background-color: $cinzah;
+	}
+	nav.submenu > ul > li:hover{
+		background-color: $azul;
+		color: #FFF !important;
+	}
+
+}
+#header{
+	*{
+		text-transform: uppercase;	
+		font-size: 15px;
+	}
+	// Walker Menu
+	margin-top: 35px;
+	#header-main{
+		margin-top: 10px;
+	}
+	.menu-header{
+		float: right;
+		margin: 0px;
+		padding: 0px;
+	}
+	.menu-header, .menu-header ul{
+		list-style: none;
+		// margin: 0;
+		// padding: 0;
+	}
+	.menu-header > li{
+		@include transition();
+		display: inline-block;
+		padding: .6rem 0;
+		margin-right: -5px;
+	}
+	.menu-header > li > a{
+		@include transition();
+		@include borderr();
+		padding: .2rem .5rem;
+		color: #515050;
+		pointer-events: none;
+		cursor: pointer;
+	}
+	.menu-header > li:hover > a{
+		color: #FFF;
+	}	
+	.menu-header li:last-child a{border:none;}
+
+	
+
+	// Mega menu
+	.menu-header ul{
+		display: none;
+		
+	}
+	.menu-header > li{
+		@include transition();
+	}
+	.menu-header > li:hover{
+		background-color: $azul;
+	}
+	.menu-header li.menu-item-depth-0.current-menu-ancestor{
+		background-color: $azul;
+		a{
+			border-right: none	;
+			color: #FFF;
+		}
+	}
+	.menu-header > li:hover > ul{
+		padding: 1rem;
+		position: absolute;
+		margin: 0;
+		padding: 0;
+		background-color: $azulh;
+		padding: 1.5rem;
+		margin-top: .6rem;
+		margin-left: -10rem;
+		z-index: 5;
+	}
+	.menu-header li > ul li{
+		// 
+		// float: left;
+		// width: 300px;
+		// 
+		display: inline-table;
+		padding-right: 2rem;
+		text-align: left;
+	}
+	.menu-header li > ul > li > ul > li{
+		display: block;
+	}
+	.menu-header li > ul > li > ul{
+		margin-left: 8px;
+	}
+	.menu-header > li > ul.sub-menu > li > a{
+		display: block;
+	    margin-bottom: 20px;
+    	padding-bottom: 5px;
+    	border-bottom: 2px solid #FFCC29;
+	}
+	.menu-header > li > ul > li > ul > li > a:hover{
+		text-decoration: underline;
+	}
+	// Hover Mega Menu
+	.menu-header li:hover ul{
+		z-index: 1000;
+		display: block;
+	}
+	ul.sub-menu{
+		li{
+			a{
+				color: #FFF;
+			}
+		}
+	}
+	ul.menu-depth-2{
+		a:before{
+			font-family: "FontAwesome";
+			content: "\f105  ";
+		}
+	}
+}
+@mixin imageresize{
+	margin-bottom: 1rem;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+.imageresize{
+	@include imageresize();
+}
+
+
+
+@mixin button-outline($color){
+	background-color: transparent;
+	border: solid 1px $color;
+	color: $color;
+}
+@mixin button-outlineh(){
+	background-color: $azul;
+	color: #fff;
+	border: solid 1px $azul;
+}
+	.btn-nav{
+		background-color: #fff;
+		position: absolute;
+		top: 30rem;
+		cursor: pointer;
+		z-index: 999;
+		text-align: center;
+		border-radius: 50%;
+		i{
+			padding: 6px 21px;
+			text-align: center;
+			font-size: 45px;
+		}
+	}
+	.btn-left{
+		left: 4rem;
+	}
+	.btn-right{
+		right: 4rem;
+	}
+	.button-amarelo{font-family: "Roboto";}
+
+	#wpmtst_client_name,#wpmtst_email,#wpmtst_post_content{
+		border: solid 2px $azul !important;
+	}
+	
+	body.is-reveal-open {overflow-y: scroll;}
+	.reveal-overlay{z-index: 9999;overflow-y: hidden;}
+
+	.strong-form textarea{height: 5rem !important;}
+	.testimonial-success{
+		font-size: 20px;
+		text-align: center;
+		font-weight: 600;
+		color: $azul;
+	}
+	
+	// Modais
+		// login
+		.modal{
+			background-color: $azul;
+			padding: 2rem;
+			header{
+				h2{font-size: 25px; color:#FFF;text-align:center;font-family:"Raleway";}
+			}
+			main{
+				label{
+					color: #FFF;
+				}
+				.button{
+					background-color:#fff !important;
+					color: $azul;
+					@include transition();
+					font-weight:600;
+					box-shadow: 0 -5px 0 rgba(0, 0, 0, 0.18) inset !important;
+				}
+
+				.button:hover,.button.active{background-color:$azulh !important;color: #FFF;}
+			}
+			footer{
+				.modal-create{
+					color: #FFF;
+				}
+				a{
+					color: #FFF;
+				}
+			}
+
+			// WP
+			.login-remember{display:none;}
+		}
+		.reveal{
+			width: 400px;
+			border:none; 
+			position: initial;
+			margin-top: 1rem;
+		}
+		.callout.message{
+			display:none;
+			position: absolute;
+			right: 2rem;
+			top: 2rem;
+			width:15rem;
+			z-index: 999999;
+		}
+		.callout.message.show{display:block;}
+
+
+		.allert.collout{background-color: #cc4b37;}
+		.is-invalid-input:not(:focus){border:1px solid #cc4b37 !important;background-color: #f9ecea;}

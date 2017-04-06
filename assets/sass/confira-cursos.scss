@@ -1,0 +1,25 @@
+@import 'styles';
+
+#confira-cursos{
+	padding: 1rem;
+	margin-top: 10px;
+	background-color: $amarelo;
+	span{
+		color: #000;
+		display: block;
+		font-weight: 500;
+	}
+	h4{
+		font-weight: bold;
+	}
+	button{
+		float: right;
+		@include btn-outline();
+		color: #000;
+		border-radius: 5px;
+		margin-top: 14px;
+	}
+	button:hover{
+		@include btnoutline(#000);
+	}
+}

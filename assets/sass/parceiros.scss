@@ -1,0 +1,52 @@
+@import 'styles';
+
+#parceiros{
+	margin-top: 60px;
+	position: relative;	
+	margin-top: 60px;
+	.imageresize{
+		height: 6rem;
+	}
+	.btn-nav{
+		top: 4.7em;
+		padding: 1rem 1.2rem;
+		i{
+			font-size: 50px;
+		}
+	}
+	.parceiros{
+		margin: 0 auto;
+		width: calc(80%);
+		margin-top: 2rem;
+		.parceiro{
+			width: calc(100% - 10px);
+			margin-right: 5px;
+			margin-left: 5px;
+		}
+	}
+	header > h1{
+		font-size: 30px;
+		position: relative;
+		text-align: center;
+	    font-family: "Roboto";
+	}
+	header > h1:after{
+		@include linesh1($azul);
+		right: 22%;
+	}
+	header > h1:before{
+		@include linesh1($azul);
+		left: 22%;
+	}
+	> footer{
+		text-align: center;
+		margin-top: 3rem;
+		button{
+			@include button-outline(#b5babf);
+			color: #606163;
+		}
+		button:hover{
+			@include button-outlineh();
+		}
+	}
+}

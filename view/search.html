@@ -1,0 +1,18 @@
+<div class="large-6 large-centered columns">
+	<form ng-submit="submit()" name="form">
+		 <input type="text" class="input" name="search" placeholder="Pesquise... " ng-model="pesquisa" ng-change="submit()" ng-delay="300">
+	</form>
+	
+	<h4>Mais Pesquisados...</h4>
+	<div ng-repeat="a in ncms | filter: pesquisa">
+		<span class="ncm"><b>Número da NCM:</b> {{a.NCM.numero_da_ncm}}</span>
+		<br>
+		<span class="ncm"><b>Descrição Da Ncm:</b> <span>{{a.NCM.descricao_da_ncm}}</span></span>
+		<br>
+			<span style="font-weight: bold;">Observações: </span><br>
+			<ul>
+				<li>{{a.NCM.observacao_id}}</li>
+			</ul>
+			<hr>
+	</div>
+</div>
