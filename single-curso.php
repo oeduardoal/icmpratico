@@ -24,7 +24,7 @@
 		</h1>
 	</header>
 	<div class="row">
-		<section class="articles large-4 float-left">
+		<section class="articles large-4 medium-4 small-12 float-left">
 			<main>
 				<h6>PRIMEIRO LOTE</h6>
 				<small><?php echo get_field('primeiro_lote_data'); ?></small>
@@ -32,7 +32,7 @@
 				<a href="#inscrever" class="button primary">INSCREVA-SE</a>
 			</main>
 		</section>
-		<section class="articles large-4 float-left">
+		<section class="articles large-4 medium-4 small-12 float-left">
 			<main>
 				<h6>SEGUNDO LOTE</h6>
 				<small><?php echo get_field('primeiro_lote_data'); ?></small>
@@ -40,7 +40,7 @@
 				<a href="#inscrever" class="button primary">INSCREVA-SE</a>
 			</main>
 		</section>
-		<section class="articles large-4 float-left">
+		<section class="articles large-4 medium-4  small-12  float-left">
 			<main>
 				<h6>TERCEIRO LOTE</h6>
 				<small><?php echo get_field('primeiro_lote_data'); ?></small>

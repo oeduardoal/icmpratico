@@ -9,7 +9,7 @@
 		$legislacoes->the_post();
 	?>
 		<a href="<?php the_permalink(); ?>">
-			<article class="large-4 float-left">
+			<article class="large-4 medium-4 small-12 float-left">
 				<div class="right">
 					<header>
 						<h2><?php the_title(); ?></h2>

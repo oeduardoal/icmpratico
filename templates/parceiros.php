@@ -10,7 +10,7 @@
 		<button class="btn-nav btn-right">
 			<i class="fa fa-angle-right" aria-hidden="true"></i>
 		</button>
-	<section class="parceiros slider-parceiros">
+	<section class="parceiros slider-parceiros  owl-carousel owl-theme">
 		<?php $argsc = array('post_type' => 'parceiro', 'posts_per_page' => 1000); ?>
 			<?php $cursos = new WP_Query($argsc); ?>
 			<?php

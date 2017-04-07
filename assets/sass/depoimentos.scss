@@ -6,8 +6,9 @@
 	background-color: $azulclaro;
 	padding-top: 2rem;
 	position: relative;
+	clear: both;
 	.btn-nav{
-		top: 11rem;
+		top: 9rem;
 	}
 	// Header
 	header > h1{
@@ -29,6 +30,7 @@
 		margin: 0 auto;
 		font-family: "Raleway";
 		margin-top: 2rem;
+		height: 11rem;
 	}
 	.item{
 		background-color: #fff;

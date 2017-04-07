@@ -2,7 +2,7 @@
 	<header>
 		<h1><b>CURSOS</b> ICMS PRÁTICO</h1>
 	</header>
-		<div class="row" id="slider-cursos">
+		<div class="row owl-carousel owl-theme" id="slider-cursos">
 			<?php $argsc = array('post_type' => 'curso', 'posts_per_page' => 4); ?>
 			<?php $cursos = new WP_Query($argsc); ?>
 			<?php

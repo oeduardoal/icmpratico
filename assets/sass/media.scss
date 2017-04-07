@@ -2,17 +2,45 @@
 	.row{
 		max-width: 1600px;
 	}
-	#noticias #articles{
-		width: 60% !important;
-	}
-	#confira-cursos{
-		padding-right: 10rem;
-	}
-	#search{
-		.row{
-			max-width: 1600px;
+	
+	#banner{
+		#search{
+			.row{
+				padding: 3.9rem 1rem;
+			}
 		}
 	}
+	#cursos-icms{
+		margin-top: 10rem;
+		article{
+			min-height: 15rem;
+		}
+	}
+	#instagram{}
+	#noticias{
+		padding-bottom: 4rem;
+		#articles{
+			width: 80% !important;
+		}
+		.btn-left{
+			left: 5rem;
+		}
+		.btn-right{
+			right: 5rem;
+		}
+		.article-item{
+			min-height: 30rem;
+		}
+	}
+
+	#legislacoes{}
+	#depoimentos{
+		padding: 4rem 0;
+	}
+	#parceiros{
+		padding-bottom: 4rem;
+	}
+	
 }	
 
 @media screen and (min-width: 1440px) and (max-width: 1680px) {
@@ -27,18 +55,151 @@
 	}
 }
 
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: 1285px) {
 	.row{
 		max-width: 1200px;
+	}
+	#header{
+		.menu-header > li > a{
+			font-size: 13px;
+		}
+	}
+	#banner{
+	}
+	#confira-cursos{
+	    padding: 0.3rem 1rem;
+	}
+	#cursos-icms{
+		#slider-cursos{
+			width: 90%;
+		}
+	}
+	#instagram{}
+	#noticias{
+		padding-bottom: 4rem;
+	}
+
+	#legislacoes{}
+	#depoimentos{
+	}
+	#parceiros{
 	}
 }
 
 @media screen and (max-width: 1025px) {
+
+	// Barras
+	header>h1:after, header>h1:before{display:none;}
+
 	.row{
 		padding-right: 1rem;
 		padding-left: 1rem;
 	}
+	#search{
+		 button.btn-search{
+		 	padding-left: 1rem;
+		 }
+		 
+	}
+	#cursos-icms{
+		
+	}
+	#noticias{
+		.article-item{
+			min-height: 35rem;
+		}
+		.btn-nav{
+			display: none;
+		}
+		#articles{
+			width: 100% !important;
+		}
+	}
+	#legislacoes{
+		.right{
+			min-height: 15rem;	
+		}
+	}
+	#depoimentos{
+		.btn-nav{
+			display: none;
+		}
+	}
+	#parceiros{
+		.btn-nav{
+			display: none;
+		}
+	}
+	#confira-cursos{
+		h4{
+			font-size: 18px;
+		}
+	}
+	#confira-cursos{
+		 button{
+		 	padding: .5rem;
+		 }
+	}
 }
 
-@media screen and (max-width: 39.9375em) {}
+@media screen and (max-width: 961px) {
+	.row{
+		padding-right: 0rem;
+		padding-left: 0rem;
+	}
+	.slider{
+		display: none;
+	}
+	#search{
+		width: 100%;
+		 button.btn-search{
+		 	padding-left: .6rem;
+		 }
+		 
+	}
+	#header {
+		#header-main{
+			margin-top: 30px !important;
+			margin-bottom: 30px;
+		}
+		.menu-header{
+			text-align:center;
+			 > li > a{
+				border-right: none !important;
+			 }
+		}
 
+	}
+	#logo-icms{
+		text-align: center;
+	}
+
+	#legislacoes{
+		.right{
+			min-height: 16rem;	
+		}
+	}
+}
+@media screen and (max-width: 805px) {
+	
+	#legislacoes{
+		.float-left,.right{
+			width: 100%;
+		}
+		.right{
+			float: none;
+			min-height: 0rem;	
+			max-height: 15rem !important;	
+		}
+	}
+	#noticias{
+		.article-item{
+			min-height: 29rem;
+		}
+		.sub{
+			padding: 0 2rem;
+		}
+	}
+
+	
+}

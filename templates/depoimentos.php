@@ -11,10 +11,10 @@
 			<i class="fa fa-angle-right" aria-hidden="true"></i>
 		</button>
 
-	<section class="articles slider-depoimentos">
-	<?php $args = array('post_type' => 'wpm-testimonial','posts_per_page' => 10 ); $comentarios = new WP_Query( $args ); while ( $comentarios->have_posts() ) : $comentarios->the_post(); ?>
+	<section class="articles  owl-carousel owl-theme slider-depoimentos">
+	<?php $args = array('post_type' => 'wpm-testimonial','posts_per_page' => 2 ); $comentarios = new WP_Query( $args ); while ( $comentarios->have_posts() ) : $comentarios->the_post(); ?>
 			<article class="item">
-			<div class="aspas"></div>
+				<div class="aspas"></div>
 				<main>
 					<p>
 						<?php echo wp_trim_words(get_the_excerpt()); ?>

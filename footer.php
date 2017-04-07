@@ -3,7 +3,7 @@
 	<section class="widgets">
 		<section class="row">
 		<?php for ($i=1; $i < 4; $i++): ?>
-				<section class="large-4 columns">
+				<section class="large-4 medium-4 small-12 columns">
 					<?php 
 						$location = 'menurodape'. $i;
 						$menu_obj = get_menu_obj($location); 

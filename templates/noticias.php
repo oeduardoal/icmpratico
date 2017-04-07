@@ -11,7 +11,7 @@
 		<button class="btn-nav btn-right">
 			<i class="fa fa-angle-right" aria-hidden="true"></i>
 		</button>
-		<section id="articles" class="slider-noticias">
+		<section id="articles" class="slider-noticias  owl-carousel owl-theme">
 
 			<?php $argsn = array('post_type' => 'post', 'post'); ?>
 			<?php $noticias = new WP_Query($argsn); ?>

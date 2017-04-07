@@ -5,61 +5,110 @@
 	$(document).ready(function() {
 			$(document).foundation();
 			console.log("Desenvolvido por Eduardo Almeida :D");
-			$('.slider-noticias').owlCarousel({
-				items:3,
-				pagination: false,
-				slideSpeed: 500,
-				autoPlay: 2500,
+			var slider_noticias = $('.slider-noticias').owlCarousel({
+				loop:true,
+			    nav:false,
+			    dots:false,
+				autoplayTimeout:2000,
+				autoplay:true,
+			    responsive:{
+			        0:{
+			            items:1
+			        },
+			        600:{
+			            items:1
+			        },
+			        800:{
+			            items:1
+			        },
+			        1000:{
+			            items:2
+			        }
+			    }
 			});
-			$('.slider-depoimentos').owlCarousel({
-				items:2,
-				pagination: false,
-				slideSpeed: 500,
-				autoPlay: 2500,
+			var slider_depoimentos = $('.slider-depoimentos').owlCarousel({
+				loop:false,
+			    nav:false,
+			    dots:false,
+				autoplayTimeout:2000,
+				autoplay:true,
+			    responsive:{
+			        0:{
+			            items:1
+			        },
+			        600:{
+			            items:1
+			        },
+			        800:{
+			            items:1
+			        },
+			        1000:{
+			            items:2
+			        }
+			    }
 			});
-			$('.slider-parceiros').owlCarousel({
-				items:5,
-				pagination: false,
-				slideSpeed: 500,
-				autoPlay: 2500,
+			var slider_parceiros = $('.slider-parceiros').owlCarousel({
+				loop:true,
+			    nav:false,
+			    dots:false,
+				autoplayTimeout:2000,
+				autoplay:true,
+			    responsive:{
+			        0:{
+			            items:1
+			        },
+			        600:{
+			            items:1
+			        },
+			        800:{
+			            items:1
+			        },
+			        1000:{
+			            items:2
+			        }
+			    }
 			});
-			$('#slider-cursos').owlCarousel({
-				items:2,
-				pagination: false,
-				slideSpeed: 500,
-				autoPlay: 2500,
+			var slider_cursos = $('#slider-cursos').owlCarousel({
+				loop:true,
+			    nav:false,
+			    dots:false,
+			    autoplayTimeout:2000,
+			    autoplay:true,
+			    responsive:{
+			        0:{
+			            items:1
+			        },
+			        600:{
+			            items:1
+			        },
+			        800:{
+			            items:1
+			        },
+			        1000:{
+			            items:2
+			        }
+			    }
 			});
 
-			var owl = $('.slider-noticias');
-			$('.btn-left').click(function() {
-			    owl.trigger('owl.prev');
+			$('#noticias .btn-left').click(function() {
+				slider_noticias.trigger('prev.owl.carousel');
 			})
-			$('.btn-right').click(function() {
-			    owl.trigger('owl.next');
-			})
-
-			var owlp = $('.slider-parceiros');
-			$('#parceiros .btn-left').click(function() {
-			    owlp.trigger('owl.prev');
-			})
-			$('#parceiros .btn-right').click(function() {
-			    owlp.trigger('owl.next');
+			$('#noticias .btn-right').click(function() {
+				slider_noticias.trigger('next.owl.carousel');
 			})
 
-			var owld = $('.slider-depoimentos');
 			$('#depoimentos .btn-left').click(function() {
-			    owld.trigger('owl.prev');
+				slider_depoimentos.trigger('prev.owl.carousel');
 			})
 			$('#depoimentos .btn-right').click(function() {
-			    owld.trigger('owl.next');
+				slider_depoimentos.trigger('next.owl.carousel');
 			})
 
-			var owlc = $('#slider-cursos');
-			$('#cursos .btn-left').click(function() {
-			    owlc.trigger('owl.prev');
+			$('#parceiros .btn-left').click(function() {
+				slider_parceiros.trigger('prev.owl.carousel');
 			})
-			$('#cursos .btn-right').click(function() {
-			    owlc.trigger('owl.next');
+			$('#parceiros .btn-right').click(function() {
+				slider_parceiros.trigger('next.owl.carousel');
 			})
 			
 			// $("html").niceScroll();
@@ -106,9 +155,9 @@
 		        }
 		    });
 			
-			if(!AUTHED){
-				$('#modal-login').foundation('open');
-			}
+			// if(!AUTHED){
+			// 	$('#modal-login').foundation('open');
+			// }
 
 			$('#user_login').attr('placeholder', 'Login').attr('autofocus', '<true></true>');
     		$('#user_pass').attr('placeholder', 'Senha');

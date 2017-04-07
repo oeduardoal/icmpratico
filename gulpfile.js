@@ -39,8 +39,8 @@ gulp.task('images', function(){
 gulp.task('sass', function(){
   var files = [
     'assets/sass/_styles.scss',
-    'assets/sass/media.scss',
     'assets/sass/*.scss',
+    'assets/sass/media.scss',
   ];
    return gulp.src(files)
     .pipe(sass().on('error', sass.logError))

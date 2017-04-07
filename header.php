@@ -42,6 +42,13 @@
 		ga('create', 'UA-84523446-2', 'auto');
 		ga('send', 'pageview');
 	</script>
+	
+	<!-- Azul -->
+	<!-- <meta name="theme-color" content="#007abb"> -->
+
+	<!-- Amarelo -->
+	<meta name="theme-color" content="#fac227">
+
 </head>
 <body <?php body_class(); ?>>
 

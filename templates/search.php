@@ -1,4 +1,4 @@
-<section id="search" class="large-5 float-left" ng-app="app">
+<section id="search" class="large-5 float-right" ng-app="app">
 	<div class="row">
 
 		<!-- Buscador Prático -->
