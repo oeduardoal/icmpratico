@@ -88,7 +88,7 @@
 				
 		  		<?php wp_nonce_field('vb_new_user','vb_new_user_nonce', true, true ); ?>
 		  		<label>
-		  			<input type="text" name="reg_user" placeholder="Login" autocomplete="off" aria-describedby="exampleHelpText" id="vb_username" required>
+		  			<input type="text" name="reg_user" placeholder="Usuário" autocomplete="off" aria-describedby="exampleHelpText" id="vb_username" required>
 		  			<span class="form-error">Esse campo é requerido</span>
 		  		</label>
 		  		

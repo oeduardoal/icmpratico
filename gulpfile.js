@@ -26,7 +26,7 @@ gulp.task('browserSync', function() {
       '**/sass/*.scss',
   ];
   browserSync.init(files, {
-    proxy: '192.168.2.250/icms',
+    proxy: 'http://localhost/icms',
   });
 })
 
