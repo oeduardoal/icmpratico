@@ -34,7 +34,7 @@
 					while($posts->have_posts()):
 					$posts->the_post();
 				?>
-
+					<a href="<?php the_permalink(); ?>">
 					<div class="article-item large-12 medium-12 small-12 columns">
 						<?php if(has_post_thumbnail()): ?>
 							<div class="large-4 columns imageresize left" style="background-image: url(<?php the_post_thumbnail_url('full'); ?>);"></div>
@@ -58,7 +58,7 @@
 							</button>
 						</a>
 						</div>
-
+					</a>
 						
 				</div>
 				<?php endwhile;wp_reset_postdata(); ?>

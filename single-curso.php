@@ -51,5 +51,4 @@
 		
 	</div>
 </section>
-<?php get_template_part("templates/depoimentos"); ?>
 <?php get_footer(); ?>	

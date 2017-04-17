@@ -1,5 +1,16 @@
 @import 'styles';
 
+#confira-cursos-mobile{
+	display: none;
+	margin-top: 21rem;
+	clear:both;
+	padding: 1rem 3rem;
+	background-color: $amarelo;
+	span{
+		padding: 0rem 2rem;
+		font-weight: 600;
+	}
+}
 #confira-cursos{
 	padding: 1rem;
 	margin-top: 10px;

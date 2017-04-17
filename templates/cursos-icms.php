@@ -1,4 +1,4 @@
-<section id="cursos-icms">
+<section id="cursos-icms" class="hide-for-small-only">
 	<header>
 		<h1><b>CURSOS</b> ICMS PRÁTICO</h1>
 	</header>
@@ -9,9 +9,8 @@
 				while($cursos->have_posts()):
 				$cursos->the_post();
 			?>
-				<article class="columns item">
-					<a href="<?php the_permalink(); ?>">
-
+			<article class="columns item">
+				<a href="<?php the_permalink(); ?>">
 					<div class="left">
 						<label class="periodo">Periodo</label>
 						<label class="data"><?php the_field('periodo') ?> </label>
@@ -32,7 +31,7 @@
 						</a>
 					</div>
 				</a>
-				</article>
+			</article>
 		<?php endwhile; ?>
 		<?php wp_reset_postdata(); ?>
 

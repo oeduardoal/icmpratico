@@ -1,4 +1,9 @@
-<section id="search" class="row expanded" ng-app="app">
+<section id="subsearch">
+	<h4>ESTÁ PROCURANDO POR ALGO?</h4>
+	<button class="button" id="toggle-search" data-toggle="search"><i class="fa fa-search"></i></button>
+</section>
+
+<section id="search" class="row expanded toggle-hide" ng-app="app" data-dropdow>
 	<div class="row">
 
 		<!-- Buscador Prático -->

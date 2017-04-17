@@ -3,7 +3,7 @@
 			<h1>NOTÍCIAS E DESTAQUE</h1>
 		</header>
 		<main class="sub">
-			<p>onec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis</p>
+			<p>Confira as notícias e dicas e fique por dentro das novidades.</p>
 		</main>
 		<button class="btn-nav btn-left">
 			<i class="fa fa-angle-left" aria-hidden="true"></i>

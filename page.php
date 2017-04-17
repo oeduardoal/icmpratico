@@ -3,7 +3,7 @@
 
 
 <?php while (have_posts()): the_post(); ?>
-<section class="row expanded" id="asd">
+<section class="row expanded">
 	<section id="content" class="large-8 float-left page page-id-<?php the_ID(); ?>">
 		<?php get_template_part("templates/breadcrumbs" ); ?>
 		<header>

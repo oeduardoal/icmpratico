@@ -60,3 +60,11 @@
 	</div>
 	<?php get_template_part("templates/confira-cursos") ?>
 </section>
+<section id="confira-cursos-mobile"	>
+	<a href="<?php bloginfo('siteurl'); ?>/curso">
+		<picture>
+			<img src="<?php echo assetsurl ?>/assets/img/cursos-icon.png" alt="">
+		</picture>
+		<span>NOSSOS CURSOS</span>
+	</a>
+</section>

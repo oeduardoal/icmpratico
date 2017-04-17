@@ -25,7 +25,18 @@ a,a:hover,p, span{color: #252525;font-size: 16px;}
 		right: 0;
 		top: 0;
 	}
-
+.link-close{
+	position: absolute;
+	right: 1rem;
+	top: 2rem;
+	color: #fff;
+}
+.login-header{
+	display:none;
+}
+#subsearch{
+	display:none;
+}
 @mixin linesh1($color){
 	content: "";
 	width: 130px;
@@ -302,7 +313,7 @@ input,input:hover,input:active,input:focus{box-shadow: none !important;border: n
 			.login-remember{display:none;}
 		}
 		.reveal{
-			width: 400px;
+			max-width: 400px;
 			border:none; 
 			position: initial;
 			margin-top: 1rem;
@@ -320,3 +331,6 @@ input,input:hover,input:active,input:focus{box-shadow: none !important;border: n
 
 		.allert.collout{background-color: #cc4b37;}
 		.is-invalid-input:not(:focus){border:1px solid #cc4b37 !important;background-color: #f9ecea;}
+		button#responsive-menu-button{
+			z-index: 998 !important;
+		}

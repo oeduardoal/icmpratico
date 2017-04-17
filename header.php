@@ -55,6 +55,7 @@
 
 <!-- Modal  Login-->
 <div class="reveal modal" id="modal-login" data-reveal data-close-on-click="true"  data-animation-in="fade-in">
+	<a href="#" class="link-close" ><i class="fa fa-close"></i></a>
 	<header>
 		 <h2>Área restrita, identifique-se para acessar.</h2>
 	</header>
@@ -65,7 +66,6 @@
 	<footer>
 		<a class="modal-create" href="#">+ Crie já sua conta!</a> 
 	</footer>
-
 </div>
 
 
@@ -76,7 +76,7 @@
 
 <!-- Modal Criar Conta -->
 <div class="reveal modal" id="modal-create" data-reveal  data-animation-in="fade-in">
-	
+	<a href="#" class="link-close" ><i class="fa fa-close"></i></a>
 	<header>
 		<h2>Informe seus dados para criação da sua conta.</h2>
 	</header>

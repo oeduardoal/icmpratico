@@ -39,11 +39,21 @@
 					</a>
 				</picture>
 			</section>
+			<section class="login-header">
+			<?php if(!is_user_logged_in()): ?>
+				<a class="login-form modal-login">
+				LOGIN
+				</a>
+				<?php else: ?>
+					<a class="login-form" href="<?php bloginfo('siteurl'); ?>/wp-admin/profile.php">Minha Conta</a>
+				<?php endif; ?>
+			</section>
 			<section id="header-main" class="large-10 columns">
 				<nav class="menu">
 					  <?php wp_nav_menu(array('theme_location' => 'header-menu', 'menu_class' => 'menu-header', 'container' => 'menu', 'walker' => new my_walker_nav_menu)); ?>
 				</nav>
 			</section>
+			
 		</section>
 	</section>
 </header>

@@ -9,7 +9,7 @@
 				loop:true,
 			    nav:false,
 			    dots:false,
-				autoplayTimeout:2000,
+				autoplayTimeout:2500,
 				autoplay:true,
 			    responsive:{
 			        0:{
@@ -30,7 +30,7 @@
 				loop:false,
 			    nav:false,
 			    dots:false,
-				autoplayTimeout:2000,
+				autoplayTimeout:2500,
 				autoplay:true,
 			    responsive:{
 			        0:{
@@ -51,7 +51,7 @@
 				loop:true,
 			    nav:false,
 			    dots:false,
-				autoplayTimeout:2000,
+				autoplayTimeout:2500,
 				autoplay:true,
 			    responsive:{
 			        0:{
@@ -72,7 +72,7 @@
 				loop:true,
 			    nav:false,
 			    dots:false,
-			    autoplayTimeout:2000,
+			    autoplayTimeout:2500,
 			    autoplay:true,
 			    responsive:{
 			        0:{
@@ -119,7 +119,18 @@
 				$('#widgets').toggleClass('large-4').toggleClass('large-2');
 			})
 
+			$('#toggle-search').click(function(){
+				var p = $('#toggle-search').attr("data-toggle")
+				$('#' + p).toggleClass('toggle-show');
+				console.log(p);
+			})
 
+			$('.link-close').click(function(e){
+				e.preventDefault();
+				$('#modal-create').foundation('close');
+				$('#modal-login').foundation('close');
+			})
+ 				
 			$('.modal-login').click(function(e){
  				e.preventDefault();
  				 $('#modal-create').foundation('close');
@@ -132,7 +143,7 @@
  				 $(".callout.message").hide();
 			})
 
-			$('a, button, .btn-search, .content, .widget, .owl-item').not('.logo, #scrollToTop, .esqueceu-senha , .modal-create , #modal-login , #create-account-button, #logo-icms a , #depoimentos a,#depoimentos button, .button-toggle, [href*="/curso/"]').click(function(e){
+			$('a, button, .btn-search, .content, .widget, .owl-item, #responsive-menu-container').not('.logo, #scrollToTop, .esqueceu-senha , .modal-create , #modal-login , #create-account-button, #logo-icms a , #responsive-menu-button ,#depoimentos a,#depoimentos button,.link-close , .button-toggle, [href*="/curso/"]').click(function(e){
 		        if(!AUTHED )
 		        {
 		            e.preventDefault();

@@ -46,6 +46,28 @@
 		span,main,a{color: #FFF;}
 	}
 }
+#subsearch{
+	background: $azul;
+	clear:both;
+	margin-top: 8px;
+	padding:1rem;
+	text-align:right;
+	h4{
+		margin-top: .6rem;
+		color: #fff;
+		float: left;
+		clear: both;
+		font-weight: 600;
+	}
+	button{
+		background-color:#FFF;
+		border-radius: 20px;
+		margin-bottom: 0px;
+		i{
+			color: $azul;
+		}
+	}
+}
 .page,.single,.search,.archive{
 	header{
 		text-align: center;
