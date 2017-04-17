@@ -1,0 +1,3 @@
+<div class="login-continuar">
+	Empolgado com a leitura? Ainda não criou a sua conta?! <br> Faça <a href="#" class="modal-login">login</a> ou <a href="#" class="modal-create">crie uma</a> para continuar...
+</div>

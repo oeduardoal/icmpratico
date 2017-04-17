@@ -47,7 +47,7 @@
 		wp_enqueue_script( 'owl_js',  assetsurl() . '/lib/owl-beta/owl.carousel.js', array('jquery'), '',true);
 
 
-		
+			
 		
 		// Lightbox
 		// wp_enqueue_style( 'style_lightbox', assetsurl() . '/lib/lightbox/css/lightbox.min.css');

@@ -11,8 +11,8 @@
 		</header>
 		<main>
 			<?php $observacao_id = get_post_meta(get_the_ID(), 'observacao')[0] ?>
-			<?php $content = get_post($observacao_id); ?>
-			<?php echo $content->post_content; ?>
+			<?php $observacao = get_post($observacao_id); ?>
+			<?php conteudo($observacao->post_content); ?>
 		</main>
 	</section>
 	<?php get_sidebar(); ?>
