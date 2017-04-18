@@ -6,11 +6,11 @@
 				<span>
 					Olá, Visitante - 		
 					<b>
-						<a href="#" class="modal-login">Entrar</a>
+						<a href="<?php get_the_permalink() || get_site_url(); ?>" class="modal-login">Entrar</a>
 					</b>
 					ou
 					<b>
-						<a href="#"  class="modal-create">Cadastrar</a>
+						<a href="<?php get_the_permalink() || get_site_url(); ?>"  class="modal-create">Cadastrar</a>
 					</b>
 				</span>
 			<?php else: ?>
@@ -18,7 +18,7 @@
 					Olá, <strong><a href="<?php bloginfo('siteurl'); ?>/wp-admin/profile.php"><?php $current_user = wp_get_current_user(); echo @$current_user->user_firstname . " " . @$current_user->user_lastname; ?> (Minha Conta)</a></strong>
 					-
 					<b>
-						<a href=" <?php echo wp_logout_url( home_url() ); ?>">Sair</a>
+						<a href=" <?php echo wp_logout_url(home_url()); ?>">Sair</a>
 					</b>
 				</span>
 			<?php endif; ?>

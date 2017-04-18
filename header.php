@@ -60,7 +60,7 @@
 		 <h2>Área restrita, identifique-se para acessar.</h2>
 	</header>
 	<main>
-		<?php wp_login_form( array('redirect' => 'http://192.168.2.250:3000/icms/','label_username' => __( 'Usuário' ),
+		<?php wp_login_form( array('label_username' => __( 'Usuário' ),
 	'label_password' => __( 'Senha' ),'redirect' => ! empty( $_GET['redirect_to'] ) ? $_GET['redirect_to'] : site_url() ) ); ?>
 	</main>
 	<footer>
