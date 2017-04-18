@@ -154,7 +154,7 @@
 		                redirect_to = $(this).attr('href');
 
 		            if( $(this).is('button') )
-		                redirect_to = $(this).parents('form').attr('action');
+		                redirect_to =	 $(this).parents('form').attr('action');
 
 		            if( ! redirect_to )
 		                redirect_to = window.location.href;

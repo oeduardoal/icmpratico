@@ -17,7 +17,7 @@
 				return get_the_content();
 			else:
 
-			if(is_user_logged_in()):
+			if(!is_user_logged_in()):
 				return get_the_content();
 			else:
 				$conteudo  = "";

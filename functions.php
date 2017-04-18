@@ -21,11 +21,11 @@
 		wp_enqueue_style( 'style_foundation', assetsurl() . '/lib/foundation/css/foundation.min.css');
 		wp_enqueue_script( 'script_foundation',  'https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.1/js/foundation.js', array('jquery'));
 
-		//wp_enqueue_script( 'script_foundation_core',  'https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.1/js/plugins/foundation.core.min.js', array('script_foundation'));
+		// wp_enqueue_script( 'script_foundation_core',  'https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.1/js/plugins/foundation.core.min.js', array('script_foundation'));
 
 		wp_enqueue_script( 'script_foundation_sticky',  'https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.1/js/plugins/foundation.sticky.min.js', array('jquery', 'script_foundation'));
 
-		// wp_enqueue_script( 'script_foundation_util_trigger',  'https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.1/js/plugins/foundation.util.triggers.js', array('jquery', 'script_foundation', 'script_foundation_core'));
+		wp_enqueue_script( 'script_foundation_util_trigger',  'https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.1/js/plugins/foundation.util.triggers.js', array('jquery', 'script_foundation', 'script_foundation_core'));
 
 		// wp_enqueue_script( 'script_foundation_util_media',  'https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.1/js/plugins/foundation.util.mediaQuery.min.js', array('jquery', 'script_foundation', 'script_foundation_core'));
 
@@ -38,9 +38,9 @@
 		// wp_enqueue_style( 'owl_css_1', assetsurl() . '/lib/owl/owl.carousel.css');
 		// wp_enqueue_script( 'owl_js',  assetsurl() . '/lib/owl/owl.carousel.js', array('jquery'), '', true);
 
-		wp_deregister_script('jquery');
+		// wp_deregister_script('jquery');
 		// wp_register_script('jquery', assetsurl() . '/lib/owl-beta/vendors/jquery.min.js' ,'','', true);
-		wp_enqueue_script('jquery', assetsurl() . '/lib/owl-beta/vendors/jquery.min.js' ,'','', true);
+		// wp_enqueue_script('jquery', assetsurl() . '/lib/owl-beta/vendors/jquery.min.js' ,'','', true);
 
 		wp_enqueue_style( 'owl_css_1', assetsurl() . '/lib/owl-beta/assets/owl.carousel.css');
 		wp_enqueue_style( 'owl_css_2', assetsurl() . '/lib/owl-beta/assets/owl.theme.default.min.css');
