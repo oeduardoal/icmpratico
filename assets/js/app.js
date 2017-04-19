@@ -143,29 +143,29 @@
  				 $(".callout.message").hide();
 			})
 
-			$('a, button, .btn-search, .content, .owl-item, #responsive-menu-container').not('.logo, #scrollToTop, .esqueceu-senha , .modal-create , #modal-login , #create-account-button, #logo-icms a , #responsive-menu-button ,#depoimentos a, #inscrever ,#depoimentos button, .widget ,.link-close , .button-toggle, [href*="/curso/"]').click(function(e){
-		        if(!AUTHED )
-		        {
-		            e.preventDefault();
+			// $('a, button, .btn-search, .content, .owl-item, #responsive-menu-container').not('.logo, #scrollToTop, .esqueceu-senha , .modal-create , #modal-login , #create-account-button, #logo-icms a , #responsive-menu-button ,#depoimentos a, #inscrever ,#depoimentos button, .widget ,.link-close , .button-toggle, [href*="/curso/"]').click(function(e){
+		 //        if(!AUTHED )
+		 //        {
+		 //            e.preventDefault();
 
-		            var redirect_to = '';
+		 //            var redirect_to = '';
 
-		            if( $(this).is('a') )
-		                redirect_to = $(this).attr('href');
+		 //            if( $(this).is('a') )
+		 //                redirect_to = $(this).attr('href');
 
-		            if( $(this).is('button') )
-		                redirect_to =	 $(this).parents('form').attr('action');
+		 //            if( $(this).is('button') )
+		 //                redirect_to =	 $(this).parents('form').attr('action');
 
-		            if( ! redirect_to )
-		                redirect_to = window.location.href;
+		 //            if( ! redirect_to )
+		 //                redirect_to = window.location.href;
 
-		            $('[name=redirect_to]').val(redirect_to);
+		 //            $('[name=redirect_to]').val(redirect_to);
 
 
-		           $('#modal-create').foundation('close');
-		           $('#modal-login').foundation('open');
-		        }
-		    });
+		 //           $('#modal-create').foundation('close');
+		 //           $('#modal-login').foundation('close');
+		 //        }
+		 //    });
 			
 			// if(!AUTHED){
 			// 	$('#modal-login').foundation('open');

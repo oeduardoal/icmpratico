@@ -21,13 +21,14 @@
 <?php endforeach; ?>
 </select>
 <script>
-	var JSON_ENCODE = <?php echo json_encode($all_ncms); ?>
+	var AJAXURL_NCM = <?php echo get_post_type_archive_link( 'ncm' );  ?>
 </script>
+<?php echo get_post_type_archive_link( 'ncm' );  ?>
 <script>
 	jQuery.fn.select2.defaults.set('language', 'it');
 	jQuery('.input-select').select2({
 		ajax: {
-		    url: "http://localhost/icms/wp-json/wp/v2/ncm",
+		    url: "http://192.168.2.250/icms/wp-json/wp/v2/ncm",
 	          dataType: 'json',
 	          delay: 300,
 	          data: function (params) {

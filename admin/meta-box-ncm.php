@@ -2,6 +2,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/i18n/pt-BR.js"></script>
 
+
 <select name="observacao" class="input-select" id="" multiple="multiple" style="width: 100%;">
 <?php
 	global $post;
@@ -14,14 +15,16 @@
     ));
 
 ?>
-<?php  $a = 0;  ?>
+
 <?php foreach ( $all_obs as $al_obs ):?>
 	<option value="<?php echo $al_obs->ID; ?>" <?php echo in_array($al_obs->ID, $selected) ? ' selected="selected"' : ''; ?>>  <?php echo $al_obs->post_title; ?></option>
-	<?php $a++; ?>
 <?php endforeach; ?>
 </select>
+<?php foreach ( $all_obs as $al_obs ): ?>
+	<?php #echo in_array($al_obs->ID, $selected) ? ' selected="selected"' : '';?>
+	<?php endforeach; ?>
 <script>
 	jQuery.fn.select2.defaults.set('language', 'it');
-	jQuery('.input-select').select2({maximumSelectionLength: 1});
+	jQuery('.input-select').select2();
 </script>
 

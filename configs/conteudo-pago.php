@@ -24,8 +24,8 @@
 				$conteudo .= wp_trim_words($content, 110);
 				return $conteudo . '
 					<div class="login-continuar">
-					Empolgado com a leitura? Ainda não criou a sua conta?! <br> Faça <a href="' . get_the_permalink() . '" class="modal-login">login</a> ou <a href="' . get_the_permalink() . '" class="modal-create">crie uma</a> para continuar...
-					</div>
+	Para continuar a leitura, faça <a href="' . get_the_permalink() .'" class="modal-login">login</a> ou <a href="' . get_the_permalink() .'" class="modal-create">crie uma conta</a>, e tenha acesso ao conteúdo completo!
+</div>
 				';
 			endif;
 
