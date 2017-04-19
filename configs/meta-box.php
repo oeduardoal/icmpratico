@@ -14,19 +14,23 @@
     ?>
 <table>
 		<tr>
-			<td style="width: 50%;">
+			<td>
 	        	<label for="numero_da_ncm">Número da NCM</label>
 			</td>
-			<td  style="width: 50%;">
+		</tr>
+		<tr>
+			<td>
        			<input type="text" name="numero_da_ncm" id="numero_da_ncm" value="<?php if ( isset ( $post['numero_da_ncm'] ) ) echo $post['numero_da_ncm'][0]; ?>" />
 			</td>
 		</tr>
 		<tr>
-			<td style="width: 50%;">
+			<td>
 	        	<label for="descricao_da_ncm">Descrição da NCM</label>
 			</td>
-			<td  style="width: 50%;">
-       			<input type="text" name="descricao_da_ncm" id="descricao_da_ncm" value="<?php if ( isset ( $post['descricao_da_ncm'] ) ) echo $post['descricao_da_ncm'][0]; ?>" />
+		</tr>
+		<tr>
+			<td>
+       			<input style="width: 100%;" type="text" name="descricao_da_ncm" id="descricao_da_ncm" value="<?php if ( isset ( $post['descricao_da_ncm'] ) ) echo $post['descricao_da_ncm'][0]; ?>" />
 			</td>
 		</tr>
 	</table>
@@ -90,8 +94,6 @@
 				array( 'ID' => $post_id)
 			);
 			
-				update_post_meta($post_id, 'observacao', $data);
-
 			if($data == new stdClass()):
 				update_post_meta($post_id, 'observacao', 0);
 			else:
@@ -167,11 +169,13 @@
 	    }
 	}
 
+		
+
 	function call_meta_boxes()
 	{
 	    $classes = array(
 	        'Meta_Box_NCM_OBS',
-	         'Meta_Box_OBS_NCM',
+	         'Meta_Box_OBS_NCM'
 	    );
 
 	    foreach($classes as $class)

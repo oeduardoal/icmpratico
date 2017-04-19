@@ -172,3 +172,4 @@
 	    $origins[] = '*';
 	    return $origins;
 	}
+
