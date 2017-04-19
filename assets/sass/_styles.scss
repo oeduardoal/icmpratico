@@ -65,7 +65,7 @@ input,input:hover,input:active,input:focus{box-shadow: none !important;border: n
 	transition: all .15s ease-in-out;
 }
 @mixin borderr(){
-	border-right: solid 1px $cinzah;
+	border-right: solid 1px $amarelo;
 	// margin-right: -1px;
 
 }
@@ -98,7 +98,8 @@ input,input:hover,input:active,input:focus{box-shadow: none !important;border: n
 		color: inherit;
 	}
 	nav.submenu > ul > li:last-child{
-		background-color: $cinzah;
+		background-color: $azul;
+		color: #FFF;
 	}
 	nav.submenu > ul > li:hover{
 		background-color: $azul;
