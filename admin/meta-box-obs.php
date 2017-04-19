@@ -9,21 +9,20 @@
 			$selected  = get_post_meta($post->ID, 'ncm', true );
 			$all_ncms = get_posts(array(
 		        'post_type' => 'ncm',
-		        // 'numberposts' => -1,
-		        'orderby' => 'post_title',
-		        'order' => 'ASC',
+                'posts_per_page' => 100
 		    ));
 
 ?>
+
+
 <select name="ncm[]" class="input-select" id="" multiple="multiple" style="width: 100%;">
 <?php foreach ( $all_ncms as $al_obs ): ?>
 	<option value="<?php echo $al_obs->ID; ?>"<?php echo $al_obs->post_parent == $post->ID ? 'selected' : ''; ?>>  <?php echo $al_obs->post_title; ?> </option>
 <?php endforeach; ?>
 </select>
-<script>
-	var AJAXURL_NCM = <?php echo get_post_type_archive_link( 'ncm' );  ?>
-</script>
-<?php echo get_post_type_archive_link( 'ncm' );  ?>
+
+
+
 <script>
 	jQuery.fn.select2.defaults.set('language', 'it');
 	jQuery('.input-select').select2({

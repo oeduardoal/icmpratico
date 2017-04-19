@@ -23,6 +23,6 @@
 
 <script>
 	jQuery.fn.select2.defaults.set('language', 'it');
-	jQuery('.input-select').select2({maximumSelectionSize: 1});
+	jQuery('.input-select').select2({maximumSelectionLength: 1});
 </script>
 
