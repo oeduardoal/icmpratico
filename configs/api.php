@@ -52,3 +52,17 @@
 	function return_text( $object, $field_name, $request ) {
 		return html_entity_decode(get_the_title());
 	}
+
+	add_action( 'rest_api_init', function () {
+	  register_rest_field( 'observacao', 'text',
+	    array(
+	      'get_callback'    => 'return_text_o',
+	      'update_callback' => null,
+	      'schema'          => null
+	    )
+	  );
+	});
+
+	function return_text_o( $object, $field_name, $request ) {
+		return html_entity_decode(get_the_title());
+	}
