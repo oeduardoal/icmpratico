@@ -17,13 +17,11 @@
 				<div class="aspas"></div>
 				<main>
 					<p>
-						<?php echo wp_trim_words(get_the_excerpt()); ?>
+						<?php echo wp_trim_words(get_the_content(), 10); ?>
 					</p>
 				</main>
 				<footer>
-					<picture>
-						<img src="<?php echo assetsurl ?>/assets/img/perfil.jpg" alt="">
-					</picture>
+					
 					<label><?php the_author(); ?></label>
 				<span ><?php the_date('d/m/Y'); ?></span>
 				</footer>

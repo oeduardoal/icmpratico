@@ -1,4 +1,4 @@
-<section id="subsearch">
+<section id="procurando-algo">
 	<h4>ESTÁ PROCURANDO POR ALGO?</h4>
 	<button class="button" id="toggle-search" data-toggle="search"><i class="fa fa-search"></i></button>
 </section>

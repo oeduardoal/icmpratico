@@ -13,7 +13,7 @@
 	add_filter('the_content', 'filtro_conteudo_pago' ); 
 
 	function filtro_conteudo_pago($content){
-		if(is_singular('curso')):
+		if(is_singular('curso') || is_page('sobre-nos') || is_singular('wpm-testimonial')):
 				return get_the_content();
 			else:
 
