@@ -5,12 +5,15 @@
 	<section id="content" class="large-12 float-left category category-id-<?php the_ID(); ?>">
 		<?php get_template_part("templates/breadcrumbs" ); ?>
 	</section>
+
 		<?php while (have_posts()): the_post(); ?>
 
 			<section id="articles">
 
 				<div class="article-item large-4 medium-6 small-12 float-left">
+				<?php if(has_post_thumbnail()): ?>
 					<div class="imageresize" style="background-image: url(<?php the_post_thumbnail_url('full'); ?>); height: 10rem;"></div>
+				<?php endif; ?>
 					<header>
 						<h2><?php the_title(); ?></h2>
 					</header>
@@ -38,7 +41,8 @@
 
 			</section>
 
-		<?php endwhile;?>
+		<?php endwhile; ?>
+
 
 </section>
 

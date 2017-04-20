@@ -60,6 +60,7 @@ add_action('init', function()
         'taxonomies' => array('category'),
         'menu_position' => -1,
        	'show_in_rest' => true,
+        'public' => true
     );
 
     register_post_type('ncm', $args + $default);
@@ -266,3 +267,17 @@ add_action('init', function()
 
     register_post_type('legislacao', $args + $default);
 });
+add_filter('pre_get_posts', 'query_post_type');
+function query_post_type($query) {
+    if(is_category() || is_tag()) {
+        $post_type = get_query_var('post_type');
+        if($post_type) {
+            $post_type = $post_type;
+        } else {
+            $post_type = array('post','ncm'); // replace CPT to your custom post type
+        }
+        $query->set('post_type',$post_type);
+
+    }
+    return $query;
+}

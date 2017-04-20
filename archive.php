@@ -20,7 +20,6 @@
 					<?php echo get_next_posts_link( 'Próximo <i class="fa fa-arrow-right" aria-hidden="true"></i> '); ?>
 				</div>
 				<?php } ?>
-
 				<?php while (have_posts()): the_post(); ?>
 					<a href="<?php the_permalink(); ?>">
 					<div class="article-item large-4 medium-6 small-12 float-left">

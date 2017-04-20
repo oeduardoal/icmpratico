@@ -16,9 +16,9 @@
 
 
 <select name="ncm[]" class="input-select" id="" multiple="multiple" style="width: 100%;">
-<?php foreach ( $all_ncms as $al_obs ): ?>
-	<option value="<?php echo $al_obs->ID; ?>"<?php echo $al_obs->post_parent == $post->ID ? 'selected' : ''; ?>>  <?php echo $al_obs->post_title; ?> </option>
-<?php endforeach; ?>
+<?php #foreach ( $all_ncms as $al_obs ): ?>
+	<option value="<?php #echo $al_obs->ID; ?>"<?php #echo $al_obs->post_parent == $post->ID ? 'selected' : ''; ?>>  <?php #echo $al_obs->post_title; ?> </option>
+<?php #endforeach; ?>
 </select>
 
 

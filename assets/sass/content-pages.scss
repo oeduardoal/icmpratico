@@ -201,9 +201,13 @@
 	.search-page{
 		h3{}
 		h3:after{display: none;}
-		span.azul{
+		.azul{
 			color: $azul;
 			font-size: inherit;
+			a{
+				color: $azul;
+				font-size: inherit;
+			}
 		}
 		span.resultados{font-size: 18px;color: $azul;font-weight: 600;}
 	}
