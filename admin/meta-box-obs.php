@@ -5,10 +5,6 @@
 <?php
 	global $post;
 	$selected  = get_post_meta($post->ID, 'ncm', true );
-	$all_ncms = get_posts(array(
-        'post_type' => 'ncm',
-        'posts_per_page' => 100,
-    ));
 ?>
 <?php
 	foreach ($selected as $key => $value) {

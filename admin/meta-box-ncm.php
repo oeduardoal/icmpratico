@@ -3,6 +3,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/i18n/pt-BR.js"></script>
 
 <?php
+	global $post;
 	$selected  = (array) get_post_meta($post->ID, 'observacao', true );
 ?>
 <?php
