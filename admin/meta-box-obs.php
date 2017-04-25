@@ -5,12 +5,15 @@
 <?php
 	global $post;
 	$selected  = get_post_meta($post->ID, 'ncm', true );
-?>
-<?php
-	foreach ($selected as $key => $value) {
-		$a[] = array('id' => $value, 'text' => html_entity_decode(get_the_title($value)));
+	if($selected[0] == 0){
+
+	}else{
+		foreach ($selected as $key => $value) {
+			$a[] = array('id' => $value, 'text' => html_entity_decode(get_the_title($value)));
+		}
 	}
 ?>
+
 <script>
 	selections = <?php echo json_encode($a); ?>;
 </script>

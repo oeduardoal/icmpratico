@@ -5,10 +5,12 @@
 <?php
 	global $post;
 	$selected  = (array) get_post_meta($post->ID, 'observacao', true );
-?>
-<?php
-	foreach ($selected as $key => $value) {
-		$a[] = array('id' => $value, 'text' => html_entity_decode(get_the_title($value)));
+	if($selected[0] == 0){
+
+	}else{
+		foreach ($selected as $key => $value) {
+			$a[] = array('id' => $value, 'text' => html_entity_decode(get_the_title($value)));
+		}
 	}
 ?>
 
