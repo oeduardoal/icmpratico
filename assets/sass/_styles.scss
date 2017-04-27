@@ -142,7 +142,7 @@ input,input:hover,input:active,input:focus{box-shadow: none !important;border: n
 		cursor: pointer;
 	}
 	.menu-header > li:hover > a{
-		color: #FFF;
+		color: #000;
 	}	
 	.menu-header li:last-child a{border:none;}
 
@@ -157,7 +157,7 @@ input,input:hover,input:active,input:focus{box-shadow: none !important;border: n
 		@include transition();
 	}
 	.menu-header > li:hover{
-		background-color: $azul;
+		background-color: $amarelo;
 	}
 	.menu-header li.menu-item-depth-0.current-menu-ancestor{
 		background-color: $azul;

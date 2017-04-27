@@ -160,7 +160,7 @@
 				> li:not(.current-menu-ancestor){
 					display: none;
 				}
-				> li.current-menu-ancestor:not(.current-menu-parent) > a{display: none;}
+				> li.current-menu-ancestor:not(.current-menu-parent) > a{display: block; font-size: 25px; color: $azulh;}
 			}
 			ul.sub-menu{
 				margin-top: 10px;
