@@ -5,11 +5,13 @@
 <?php
 	global $post;
 	$selected  = get_post_meta($post->ID, 'ncm', true );
-	if($selected[0] == 0){
-
+	if(empty($selected)){
 	}else{
+		function get_name($value){
+			return wp_trim_words(get_the_title($value), 5);
+		}
 		foreach ($selected as $key => $value) {
-			$a[] = array('id' => $value, 'text' => html_entity_decode(get_the_title($value)));
+			$a[] = array('id' => $value, 'text' => html_entity_decode(get_name($value)));
 		}
 	}
 ?>

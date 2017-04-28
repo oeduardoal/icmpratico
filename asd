@@ -27,8 +27,8 @@ c) Em alguns tópicos a configuração não ficou boa, exemplo: Substituição t
 d) Data da última atualização nas "páginas" do menu;
 
 2. Página principal:
-a) No buscador da NCM trazê-las em ordem numérica;
-b) Os buscadores não estão funcionando corretamente (NCM, TODO SITE... - vide prints);
+## a) No buscador da NCM trazê-las em ordem numérica;
+## b) Os buscadores não estão funcionando corretamente (NCM, TODO SITE... - vide prints);
 ## c) "CURSOS ICMS PRÁTICO" aparecer após "VEJA AS LEGISLAÇÕES", e não abaixo dos buscadores;
 d) Autoajustar as imagens e não cortar (exemplo: posts-> TABELA NCM...);
 
