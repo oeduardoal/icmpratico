@@ -27,7 +27,7 @@
 					$filtro = "post,page,artigo";
 				}
 			?>
-			<?php echo do_shortcode('[ajax_load_more post_type="' . $filtro . '" button_label="Carregar Mais" button_loading_label="Carregando"]'); ?>
+			<?php echo do_shortcode('[ajax_load_more post_type="' . $filtro . '" button_label="Carregar Mais" button_loading_label="Carregando" order="ASC" orderby="name" search="'. get_search_query() .'"]'); ?>
 		
 	</section>
 	<?php #get_sidebar(); ?>

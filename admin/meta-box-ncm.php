@@ -22,10 +22,11 @@
 
 <script>
 	jQuery.fn.select2.defaults.set('language', 'it');
+	var domain = "http://local.icmspratico.com.br";
 	var $lista = jQuery('.input-select').select2({
 		maximumSelectionLength:1,
 		ajax: {
-		    url: "http://192.168.2.250/icms/wp-json/wp/v2/observacao",
+		    url: domain + "/wp-json/wp/v2/observacao",
 	          dataType: 'json',
 	          delay: 300,
 	          data: function (params) {

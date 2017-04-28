@@ -10,8 +10,8 @@
 		<form  action="<?php bloginfo('siteurl'); ?>" method="GET" name="form" ng-controller="main" class="large-4 columns">
 				<span>Buscador prático</span>
 				<section class="input-results">
-					<input type="text" placeholder="Digite a NCM ou palavra" ng-model="input" ng-change="getncms()" ng-delay="500"  class="input-ncm" name="s" required="required">
-					<section class="results" ng-show="input">
+					<input type="text" placeholder="Digite a NCM ou palavra" ng-model="input" ng-change="getncms()" ng-delay="500"  class="input-ncm" name="s" required="required" value="<?php the_search_query(); ?>">
+					<section class="results" ng-show="input" >
 						<picture ng-show="!ncms">
 							<h4>Procurando ...</h4>
 							<img src="<?php echo assetsurl; ?>/assets/img/loader.gif">

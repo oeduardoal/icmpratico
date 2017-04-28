@@ -26,7 +26,7 @@ gulp.task('browserSync', function() {
       '**/sass/*.scss',
   ];
   browserSync.init(files, {
-    proxy: 'http://localhost/icms',
+    proxy: 'http://local.icmspratico.com.br',
   });
 })
 
