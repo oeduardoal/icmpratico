@@ -8,7 +8,7 @@
 						</button>
 						
 						<main>
-							<?php wp_nav_menu(array('theme_location' => 'header-menu', 'menu_class' => 'menu-widgets', 'container' => 'menu')); ?>
+							<?php wp_nav_menu(array('theme_location' => 'sidebar-menu', 'menu_class' => 'menu-widgets', 'container' => 'menu')); ?>
 						</main>
 				</section>
 			<?php endif; ?>

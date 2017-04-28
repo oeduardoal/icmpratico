@@ -1,4 +1,8 @@
 <?php
+	
+	// No FTP
+	define('FS_METHOD', 'direct');
+
 	# Require
 	####################################################
 	// Mail
