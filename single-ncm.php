@@ -10,6 +10,10 @@
 			<h3><?php the_title() ?></h3>
 		</header>
 		<main>
+		<hr>
+                <h4 class="title"><?php echo getHierarquiaTitulo(get_the_ID()); ?></h4>
+		<hr>
+
 			<?php $observacao_id = get_post_meta(get_the_ID(), 'observacao')[0] ?>
 			<?php $observacao = get_post($observacao_id); ?>
 			<?php conteudo($observacao->post_content); ?>

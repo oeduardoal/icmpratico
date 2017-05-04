@@ -40,8 +40,6 @@
 				<label for="ncm"> NCM Comentada</label>
 				<input type="radio" ng-model="filtro" ng-change="getncms()"  ng-value="'posts'"  name="filtro" />
 				<label for="all">Em todo o site</label>
-				<input type="radio" ng-model="filtro" ng-change="getncms()"  ng-value="'artigo'" name="filtro"/>
-				<label for="artigos">Artigos</label>
 	    	</section>
 		</form>
 

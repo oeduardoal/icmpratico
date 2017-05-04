@@ -34,10 +34,6 @@
 									<?php echo wp_trim_words(get_the_content(), 15); ?>
 								</p>
 							</main>
-							<small>
-								<span class="data"><?php the_date('d/m/Y'); ?></span>
-								
-							</small>
 							<hr>
 							<a href="<?php the_permalink(); ?>">
 								<button class="button button-azul">

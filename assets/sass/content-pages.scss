@@ -280,12 +280,36 @@
 	}
 }
 .post-type-archive-curso{
-	#cursos-icms{
+	#cursos_icms{
 		margin-bottom: 5rem;
 		margin-top: 0px;
-		.large-6{
-			width: calc(50% - 0.5rem);
-			margin-right: .5rem;
+	}
+	.column:last-child:not(:first-child), .columns:last-child:not(:first-child){
+		float: left;
+	}
+	.cursos_icms{
+		margin-top: 50px;
+		margin-bottom: 2rem;
+		.imageresize{
+			border-bottom: solid 5px $amarelo;
+		}
+		h4{
+			font-size: 18px;
+			font-weight: 600;
+			height: 35px;
+			color: $azul;
+			margin-bottom: 1rem;
+		}
+		p{
+			height: 80px;
+			margin-bottom: 0px;
+			color: #000;
+		}
+		hr{
+			margin: .5rem 0;
+		}
+		span{
+			color: #000;
 		}
 	}
 }

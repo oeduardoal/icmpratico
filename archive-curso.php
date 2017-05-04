@@ -7,33 +7,32 @@
 			<?php get_template_part("templates/breadcrumbs"); ?>
 		</section>
 		<section class="large-12 columns">
-			<section id="cursos-icms">
+			<section id="cursos_icms">
 			<header>
 				<h1><b>CURSOS</b> ICMS PRÁTICO</h1>
 			</header>
 				<div class="row" >
 				<?php while (have_posts()): the_post(); ?>
-					<article class="large-6 medium-6 small-12 float-left">
-						<div class="left">
-							<label class="periodo">Periodo</label>
-							<label class="data"><?php the_field('periodo') ?> </label>
-							<label for="carga" class="carga-horaria">Carga Horária</label>
-							<span class="carga" id="carga"><?php the_field('carga_horaria') ?></span>
-						</div>
-						<div class="right">
-							<header>
-								<h4><?php the_title(); ?></h4>
-							</header>
-							<main>
-								<p>
-									<?php echo wp_trim_words(get_the_content(), 15); ?>
-								</p>
-							</main>
-							<a href="<?php the_permalink(); ?>">
-								<button class="button button-azul">MAIS INFORMAÇÕES</button>
-							</a>
-						</div>
+					<a href="<?php the_permalink(); ?>">
+					<article class="cursos_icms xlarge-3 large-4 medium-12 small-12 columns">
+						<?php if(has_post_thumbnail()): ?>
+							<div class="imageresize left" style="background-image: url(<?php the_post_thumbnail_url('full'); ?>);"></div>
+						<?php else: ?>
+							<div class="imageresize left" style="background-image: url(<?php echo thumbnail_default; ?>);"></div>
+						<?php endif; ?>
+						<h4><?php the_title(); ?></h4>
+						<p>
+							<?php echo wp_trim_words(get_the_content(), 15); ?>
+						</p>
+						<hr>
+						<span>
+							<label><i class="fa fa-calendar"></i> Periodo: </label>
+							<label><?php the_field('periodo') ?> </label>
+							<label><i class="fa fa-clock-o"></i> Carga Horária: </label>
+							<span><?php the_field('carga_horaria') ?></span>
+						</span>					
 					</article>
+				</a>
 			<?php endwhile; ?>
 			<?php wp_reset_postdata(); ?>
 
