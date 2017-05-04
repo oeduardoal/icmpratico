@@ -1,3 +1,7 @@
+<section class="pagenumber">
+<h3 class="first"></h3>
+<div class="insert"></div>
+</section>
 	</body>
 	<footer>
 	<section class="widgets">

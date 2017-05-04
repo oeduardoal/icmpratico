@@ -39,6 +39,13 @@
 					</a>
 				</picture>
 			</section>
+			<section id="logo-ace" class="large-2 columns">
+				<picture>
+					<a href="<?php bloginfo('siteurl') ?>">
+						<img src="<?php echo assetsurl() ?>/assets/img/logo-icms.png" alt="Logo ACE" class="logo-ace">
+					</a>
+				</picture>
+			</section>
 			<section class="login-header">
 			<?php if(!is_user_logged_in()): ?>
 				<a class="login-form modal-login">
