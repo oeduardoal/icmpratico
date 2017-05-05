@@ -5,5 +5,5 @@ app.config(function($stateProvider,$urlRouterProvider, $locationProvider){
 });
 
 app.constant("configs",{
-	domain: 'http://local.icmspratico.com.br'
+	domain: 'http://192.168.2.250/icms'
 });

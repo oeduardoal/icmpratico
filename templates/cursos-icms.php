@@ -9,36 +9,35 @@
 				while($cursos->have_posts()):
 				$cursos->the_post();
 			?>
-			<article class="columns item">
-				<a href="<?php the_permalink(); ?>">
-					<div class="left">
-						<label class="periodo">Periodo</label>
-						<label class="data"><?php the_field('periodo') ?> </label>
-						<label for="carga" class="carga-horaria">Carga Horária</label>
-						<span class="carga" id="carga"><?php the_field('carga_horaria') ?></span>
-					</div>
-					<div class="right">
-						<header>
-							<h4><?php the_title(); ?></h4>
-						</header>
-						<main>
-							<p>
-								<?php echo wp_trim_words(get_the_content(), 15); ?>
-							</p>
-						</main>
-						<a href="<?php the_permalink(); ?>">
-							<button class="button button-azul">MAIS INFORMAÇÕES</button>
-						</a>
-					</div>
+					<article class="cursos_icms item large-12 medium-12 small-12 columns">
+			<a href="<?php the_permalink(); ?>">
+						<?php if(has_post_thumbnail()): ?>
+							<div class="imageresize left" style="background-image: url(<?php the_post_thumbnail_url('full'); ?>);"></div>
+						<?php else: ?>
+							<div class="imageresize left" style="background-image: url(<?php echo thumbnail_default; ?>);"></div>
+						<?php endif; ?>
+						<h4><?php the_title(); ?></h4>
+						<p>
+							<?php echo wp_trim_words(get_the_content(), 15); ?>
+						</p>
+						<hr>
+						<span>
+							<label><i class="fa fa-calendar"></i> Periodo: </label>
+							<label><?php the_field('periodo') ?> </label>
+							<label><i class="fa fa-clock-o"></i> Carga Horária: <?php the_field('carga_horaria') ?> </label>
+						</span>					
 				</a>
-			</article>
+					</article>
 		<?php endwhile; ?>
 		<?php wp_reset_postdata(); ?>
 
 		</div>
-		<a href="<?php bloginfo('siteurl') ?>/curso">
-			<button class="button button-amarelo ver-todos">
-				VISUALIZAR TODOS
-			</button>
-		</a>
+		<footer>
+			<a href="<?php bloginfo('siteurl') ?>/curso">
+				<button class="button button-amarelo ver-todos">
+					VISUALIZAR TODOS
+				</button>
+			</a>
+		</footer>
+	
 </section>

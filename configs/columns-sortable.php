@@ -37,6 +37,7 @@ function manage_wp_posts_be_qe_manage_posts_columns( $columns, $post_type ) {
 				if ( $key == 'title' ) {
 					// $new_columns[ 'observacao_column' ] = 'Número da NCM';
 					$new_columns[ 'post_modified_column' ] = 'Atualizado Em';
+					$new_columns[ 'post_modified_author_column' ] = 'Modificado Por';
 				}
 					
 			}
@@ -65,6 +66,7 @@ function manage_observacao_sortable( $sortable_columns ) {
 	// $sortable_columns[ 'observacao_column' ] = 'observacao';
 	
 	$sortable_columns[ 'post_modified_column' ] = 'post_modified';
+	$sortable_columns[ 'post_modified_author_column' ] = 'modified';
 
 	return $sortable_columns;
 	
@@ -88,6 +90,11 @@ function manage_wp_posts_be_qe_manage_posts_custom_column( $column_name, $post_i
 		case 'post_modified_column':
 		
 			echo '<div id="post_modified-' . $post_id . '">' . get_the_modified_date("d/m/Y g:i") . '</div>';
+			break;
+
+		case 'post_modified_author_column':
+		
+			echo '<div id="post_author_modified-' . $post_id . '">' . get_the_modified_author() . '</div>';
 			break;
 			
 	}

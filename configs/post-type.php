@@ -56,7 +56,7 @@ add_action('init', function()
             'not_found_in_trash' => 'NCM não encontrado no lixo'
         ),
         'description' => '',
-        'supports' => array('title', 'editor', 'thumbnail'),
+        'supports' => array('title', 'editor', 'thumbnail', 'revisions'),
         'taxonomies' => array('category'),
         'menu_position' => -1,
        	'show_in_rest' => true,
@@ -85,7 +85,7 @@ add_action('init', function()
             'not_found_in_trash' => 'Observação não encontrado no lixo'
         ),
         'description' => '',
-        'supports' => array('title', 'editor'),
+        'supports' => array('title', 'editor', 'author', 'revisions'),
         'menu_position' => -1,
     );
 

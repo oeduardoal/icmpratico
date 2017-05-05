@@ -22,7 +22,7 @@
 
 <script>
 	jQuery.fn.select2.defaults.set('language', 'it');
-	var domain = "http://local.icmspratico.com.br";
+	var domain = "<?php echo get_site_url(); ?>";
 	var $lista = jQuery('.input-select').select2({
 		maximumSelectionLength:1,
 		ajax: {

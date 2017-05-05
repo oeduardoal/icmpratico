@@ -4,6 +4,12 @@
 		<!-- Buscador Prático -->
 		<form action="<?php bloginfo('siteurl'); ?>" method="GET" name="form" ng-controller="main">
 				<span>Buscador prático</span>
+				<section class="filtros">
+					<input type="radio" ng-model="filtro" ng-change="getncms()" ng-value="'ncm'" name="filtro" />
+					<label for="ncm"> NCM Comentada</label>
+					<input type="radio" ng-model="filtro" ng-change="getncms()"  ng-value="'posts'" name="filtro" />
+					<label for="all">Em todo o site</label>
+		    	</section>
 				<section class="input-results">
 					<input type="text" placeholder="Digite a NCM ou palavra" ng-model="input" ng-change="getncms()" ng-delay="500"  class="input-ncm" name="s" required="">
 					<section class="results" ng-show="input">
@@ -30,12 +36,7 @@
 				<span>
 					<button type="submit" class="button btn-search">Buscar</button>
 				</span>
-			<section class="filtros">
-				<input type="radio" ng-model="filtro" ng-change="getncms()" ng-value="'ncm'" name="filtro" />
-				<label for="ncm"> NCM Comentada</label>
-				<input type="radio" ng-model="filtro" ng-change="getncms()"  ng-value="'posts'" name="filtro" />
-				<label for="all">Em todo o site</label>
-	    	</section>
+			
 		</form>
 
 		<!-- Consulta CNAE-ST -->
