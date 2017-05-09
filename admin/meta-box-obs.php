@@ -12,7 +12,6 @@
 		'numberposts' => -1
 	);
 	$selected = get_children( $args );
-	var_dump($selected);
 		function get_name($value){
 			return wp_trim_words(get_the_title($value), 5);
 		}
