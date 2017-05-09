@@ -11,7 +11,7 @@
 				<span>Buscador prático</span>
 				<section class="filtros">
 					<input type="radio" ng-model="filtro" ng-change="getncms()" ng-value="'ncm'" name="filtro" />
-					<label for="ncm"> NCM Comentada</label>
+					<label for="ncm"> NCM (CEST) Comentada</label>
 					<input type="radio" ng-model="filtro" ng-change="getncms()"  ng-value="'posts'" name="filtro" />
 					<label for="all">Em todo o site</label>
 		    	</section>

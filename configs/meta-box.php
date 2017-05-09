@@ -89,21 +89,26 @@
 
 			global $wpdb;
 			$wpdb->update(
-				'wp_posts',
+				'icms_posts',
 				array('post_parent' => $_POST['observacao']),
 				array( 'ID' => $post_id)
 			);
 			
-			if($data == new stdClass()):
+			// if($data == new stdClass()):
+			// else:
+			// 	foreach($data as $value):
+			// 		update_post_meta($post_id, 'observacao', $value);
+			// 	endforeach;
+			// endif;
+
+			// foreach($data as $value):
+			// endforeach;
+
 				update_post_meta($post_id, 'observacao', 0);
-			else:
 				foreach($data as $value):
 					update_post_meta($post_id, 'observacao', $value);
+					update_post_meta($value, 'ncm', $post_id);
 				endforeach;
-			endif;
-
-			foreach($data as $value):
-			endforeach;
 	    }
 	}
 
@@ -133,30 +138,30 @@
 
 			if($data == new stdClass()):
 				$wpdb->update(
-					'wp_posts',
+					$wpdb->prefix . 'posts',
 					array('post_parent' => 0),
 					array('post_parent' => $post_id)
 				);
 				$wpdb->update(
-					'wp_postmeta',
+					$wpdb->prefix . 'postmeta',
 					array('meta_value' => 0),
 					array('meta_value' => $post_id)
 				);
 			else:
 				$wpdb->update(
-					'wp_posts',
+					$wpdb->prefix . 'posts',
 					array('post_parent' => 0),
 					array('post_parent' => $post_id)
 				);
 				$wpdb->update(
-					'wp_postmeta',
+					$wpdb->prefix . 'postmeta',
 					array('meta_value' => 0),
 					array('meta_value' => $post_id)
 				);
 
 				foreach($data as $value):
 					$wpdb->update(
-						'wp_posts',
+						$wpdb->prefix . 'posts',
 						array('post_parent' => $post_id),
 						array( 'ID' => $value)
 					);

@@ -13,7 +13,9 @@
 		}
 	}
 ?>
-
+<hr>
+	selections = <?php echo json_encode($a); ?>
+<hr>
 <script>
 	selections = <?php echo json_encode($a); ?>;
 </script>

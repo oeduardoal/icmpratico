@@ -4,18 +4,23 @@
 
 <?php
 	global $post;
-	$selected  = get_post_meta($post->ID, 'ncm', true );
-	if(empty($selected)){
-	}else{
+	// $selected  = get_post_meta($post->ID, 'ncm', true );
+
+	$args = array(
+		'post_parent' => $post->ID,
+		'post_type'   => 'ncm', 
+		'numberposts' => -1
+	);
+	$selected = get_children( $args );
+	var_dump($selected);
 		function get_name($value){
 			return wp_trim_words(get_the_title($value), 5);
 		}
-		foreach ($selected as $key => $value) {
-			$a[] = array('id' => $value, 'text' => html_entity_decode(get_name($value)));
+		foreach ($selected as $key) {
+			$a[] = array('id' => $key->ID, 'text' => html_entity_decode(get_name($key->ID)));
 		}
-	}
-?>
 
+?>
 <script>
 	selections = <?php echo json_encode($a); ?>;
 </script>
