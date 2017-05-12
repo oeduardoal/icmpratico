@@ -1,0 +1,35 @@
+@import 'styles';
+
+
+#topico{
+	margin-top: 2rem;
+}
+.topicos{
+	header{
+		h4{
+			text-align: left;
+			font-size: 25px;
+			color: $azul;
+			text-transform: uppercase;
+		}
+	}
+	main{
+		p{
+			color: $cinzap;
+			font-size: 15px;
+			margin-bottom: 5px;
+		}
+	}
+}
+#leave-comment form{
+	h5{
+		color: $azulh;
+		font-weight: 600;
+	}
+	margin-top: 2rem;
+	.columns{padding: 0px;}
+	input,textarea{
+		border: solid 1px #ccc !important;
+		box-shadow: none;
+	}
+}

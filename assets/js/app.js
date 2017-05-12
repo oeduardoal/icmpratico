@@ -218,6 +218,39 @@
 					}
 				})
 			})
+
+			$('#deixarcomentario').on('valid submit',function(e){
+				e.preventDefault();
+				var button_ = $('#criar-topico');
+				var loading = button_.attr('data-loading-text');
+				var data = new Object();
+				
+				button_.attr("disabled", "disabled");
+				button_.html(loading);
+
+    			data.action = 'novo_topico';
+				data.nonce = $('#vb_novo_topico_nonce').val();
+				data.titulo  = $('#titulo').val();
+				data.descricao  = $('#descricao').val();
+				
+				$.post({
+					type: "POST",
+					url: AJAXURL,
+					data: data,
+					success: function(response){
+				        if(response > 0 ) {
+							button_.html("Tópico Criado!");
+							$(".callout.success").show();
+			        		$('.callout.success p').html("Tópico criado com sucesso.");
+			        		setTimeout(function(){
+			        			location.reload();
+			        		},400)
+				        } else {
+							
+				        }
+					}
+				})
+			})
 	})
 })(jQuery);
 

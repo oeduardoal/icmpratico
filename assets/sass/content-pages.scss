@@ -76,6 +76,8 @@
 			font-size: 30px;
 			position: relative;
 			text-transform: uppercase;
+			font-weight: 600;
+			color: #007abb;
 		}
 		> h1:after{
 			@include linesh1($azul);

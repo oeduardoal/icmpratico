@@ -1,0 +1,103 @@
+@import 'styles';
+
+.comments_template{
+	margin-top: 2rem;
+	h3{
+		font-size: 25px;
+		color: $azulh;
+		&:after{
+			display: none;
+		}
+	}
+	h3#comments{
+		display: none;
+	}
+	p.logged-in-as{
+		display: none;
+	}
+	p.comment-form-comment{
+		label{
+			display: none;
+		}
+	}
+	textarea{
+		border: solid 1px #ccc !important;
+		box-shadow: none;
+	}
+	input.submit{
+		background-color: $azul;
+		padding: 1rem;
+		color: #FFF;
+		@include transition();
+		&:hover{
+			background-color: $azulh;
+		}
+	}
+ol.commentlist{
+	margin-left: 0px;
+	li.comment {
+		margin-bottom: 25px;
+		border: 1px solid #CCC;
+		padding: 25px;
+		background-color: #FFF;
+		img{
+			float: left;
+			margin-right: 1rem;
+		}
+		span.says{font-size: 15px;color: $cinzap;font-weight: bold;}
+		a{
+			font-size: 15px;color: $azul;
+			&:hover{
+				text-decoration: underline;
+			}
+		}
+		p{
+			margin: 15px 0;
+			padding: 20px;
+			background-color: #FAFAFA;
+			color: #333;
+		}
+		.comment-reply-link{
+			display: block;
+			width: 100px;
+			padding: 5px 10px;
+			border:none;
+			background-color: $azulh;
+			font-weight: 600;
+			color: #fff;
+			&:hover{
+					text-decoration: none;
+					@include transition();
+					background-color: $amarelo;
+					color: #000;
+			}
+		}
+		ul.children {
+			margin-top: 25px;
+			li {
+				border-style: dotted;
+			}
+			li:last-child {
+				margin-bottom: 0;
+			}
+		}
+
+		// button 
+		#respond { margin-top: 40px; padding-top: 10px; border-top: 1px dashed #CCC; }
+	}
+
+	// Comment Admin
+	li.comment.comment-author-eduardo {
+
+		background-color: #e0efff;
+		span.says,cite.fn{
+			color: $cinzap;
+		}
+	}
+}
+ol.commentlist, ul.children { list-style: none; }
+}
+
+
+
+
