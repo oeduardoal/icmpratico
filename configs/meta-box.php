@@ -89,7 +89,7 @@
 
 			global $wpdb;
 			$wpdb->update(
-				'icms_posts',
+				$wpdb->prefix . 'posts',
 				array('post_parent' => $_POST['observacao']),
 				array( 'ID' => $post_id)
 			);

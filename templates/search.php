@@ -7,7 +7,7 @@
 				<section class="filtros">
 					<input type="radio" ng-model="filtro" ng-change="getncms()" ng-value="'ncm'" name="filtro" />
 					<label for="ncm"> NCM Comentada</label>
-					<input type="radio" ng-model="filtro" ng-change="getncms()"  ng-value="'posts'" name="filtro" />
+					<input type="radio" ng-model="filtro" ng-change="getncms()"  ng-value="'post'" name="filtro" />
 					<label for="all">Em todo o site</label>
 		    	</section>
 				<section class="input-results">
@@ -19,9 +19,9 @@
 						</picture>
 						<div class="content" ng-show="ncms">
 							<h3>Resultado RÁPIDO da pesquisa</h3><hr>
-								<a href="{{ncm.link}}" ng-repeat="ncm in ncms">
+								<a href="{{ncm.url}}" ng-repeat="ncm in ncms">
 									<section class="result">
-										<h4 ng-bind-html="ncm.title.rendered | unsafe"></h4>
+										<h4 ng-bind-html="ncm.title | unsafe"></h4>
 										<p>Leia mais...</p>
 									</section>
 								</a>

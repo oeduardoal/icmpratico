@@ -68,7 +68,7 @@
 			<!-- Paginação -->
 			</section>
 			
-			<section class="large-4 medium-4 small-12 columns" id="leave-comment">
+			<section class="large-4 medium-4 small-12 end columns" id="leave-comment">
 				<div class="callout success" style="display: none;">
 					<p></p>
 				</div>
@@ -77,7 +77,7 @@
 					<div data-abide-error class="alert callout" style="display: none;">
 						<p><i class="fa fa-alert"></i>Existem erros no formulário</p>
 					</div>
-					<h5>Deixar um comentário</h5>
+					<h5>Criar um tópico</h5>
 				    <div class="medium-12 columns">
 		  			<?php wp_nonce_field('vb_novo_topico','vb_novo_topico_nonce', true, true ); ?>
 				      <label>Titulo
@@ -95,6 +95,7 @@
 				     </div>
 				  </div>
 				</form>
+				
 			</section>
 		
 
@@ -102,7 +103,5 @@
 </section>
 
 
-<?php get_template_part("templates/noticias"); ?>
-<?php get_template_part("templates/depoimentos"); ?>
 <?php get_template_part("templates/parceiros"); ?>
 <?php get_footer(); ?>	
