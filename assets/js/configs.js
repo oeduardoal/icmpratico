@@ -5,5 +5,5 @@ app.config(function($stateProvider,$urlRouterProvider, $locationProvider){
 });
 
 app.constant("configs",{
-	domain: 'http://localhost'
+	domain: 'http://local.icmspratico.com.br'
 });

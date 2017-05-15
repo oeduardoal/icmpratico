@@ -23,7 +23,7 @@
 		</header>
 			<?php
 				$filtro = $_GET['filtro'];
-				if($filtro == "posts"){
+				if($filtro == "post"){
 					$filtro = "post,page,artigo";
 				}
 			?>

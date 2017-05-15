@@ -1,5 +1,5 @@
 <?php
-
+	
 	##########################################################
 
 	add_action( 'rest_api_init', function () {
@@ -79,19 +79,51 @@
 	function my_awesome_func($request) {
 			
 			global $wpdb;
-			$var = html_entity_decode(($request['s']));
-			$var1 = utf8_decode($var);
 
-			// $var = html_entity_decode($var);
-			// $var = utf8_decode($request['s']);
-
+			$var1 = $request['s'];
 			$filtro = $request['filtro'];
-			$postss = $wpdb->get_results("SELECT ID,guid,post_title FROM $wpdb->posts WHERE post_title LIKE '$var%' AND post_type = '$filtro'" );
-
+			
 			function nm($val){
 				return html_entity_decode($val);
 			}
 
+			$var2 = urldecode($var1);
+			$var = preg_replace('/\./', '', $var2);
+			
+			switch ($filtro) {
+				case 'ncm':
+						if(is_numeric($var)):
+							$postss = $wpdb->get_results("
+								SELECT $wpdb->posts.ID, $wpdb->posts.post_title
+								FROM $wpdb->posts
+								LEFT JOIN $wpdb->postmeta
+								ON $wpdb->posts.ID = $wpdb->postmeta.post_id
+								WHERE ($wpdb->posts.post_title LIKE '$var%'
+								AND $wpdb->posts.post_parent <> 0
+								AND $wpdb->posts.post_type = '$filtro'
+								AND $wpdb->posts.post_status = 'publish')
+								GROUP BY $wpdb->posts.ID
+							");
+						else:
+							$postss = $wpdb->get_results("
+								SELECT $wpdb->posts.ID, $wpdb->posts.post_title
+								FROM $wpdb->posts
+								LEFT JOIN $wpdb->postmeta
+								ON $wpdb->posts.ID = $wpdb->postmeta.post_id
+								WHERE ($wpdb->posts.post_title LIKE '%$var%'
+								AND $wpdb->posts.post_parent <> 0
+								AND $wpdb->posts.post_type = '$filtro'
+								AND $wpdb->posts.post_status = 'publish')
+								GROUP BY $wpdb->posts.ID
+							");
+						endif;
+					break;
+				
+				case 'post':
+					$postss = $wpdb->get_results("SELECT ID,guid,post_title FROM $wpdb->posts WHERE post_title LIKE '%$var%' AND post_type = 'post' ORDER BY post_title ASC" );
+					break;
+			}
+			
 			if($postss != null){
 				foreach ($postss as $key) {
 				$return[] = array(
@@ -103,7 +135,6 @@
 			}else{
 				$return = [];
 			}
-			
 
-			return $var1;
+			return $return;
 	}

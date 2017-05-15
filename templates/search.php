@@ -1,4 +1,5 @@
 <section id="search" class="large-5 float-right" ng-app="app">
+
 	<div class="row">
 
 		<!-- Buscador Prático -->
@@ -6,7 +7,7 @@
 				<span>Buscador prático</span>
 				<section class="filtros">
 					<input type="radio" ng-model="filtro" ng-change="getncms()" ng-value="'ncm'" name="filtro" />
-					<label for="ncm"> NCM Comentada</label>
+					<label for="ncm"> (NCM/CEST) Comentada</label>
 					<input type="radio" ng-model="filtro" ng-change="getncms()"  ng-value="'post'" name="filtro" />
 					<label for="all">Em todo o site</label>
 		    	</section>

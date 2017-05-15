@@ -6,7 +6,8 @@ app.factory('NCMS',function($http, $timeout,configs){
 	obj = {
 		getNcm: function(scope, callback){
 			// $http.get(configs.domain + "/wp-json/wp/v2/" + scope.filtro + "/?search=" + scope.input)
-			$http.get(configs.domain + "/wp-json/search_ncm/" + scope.filtro + "/s=" + scope.input)
+			var input = window.encodeURIComponent(scope.input);
+			$http.get(configs.domain + "/wp-json/search_ncm/" + scope.filtro + "/s=" + input)
 			.then(function(data){
 				obj.save(data);
 				callback(data);
@@ -23,4 +24,7 @@ app.filter('trim', function () {
     return function(value) {
         
     };
+});
+app.filter('escape', function() {
+  return window.encodeURIComponent;
 });
