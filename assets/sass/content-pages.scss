@@ -327,4 +327,33 @@
 		font-size: 20px;
 	}
 }
-
+.accordion{
+	.accordion-title{
+		@include transition();
+		font-size: 16px;
+	    color: #000;
+	    background-color: #FFF;
+	    &:hover,&.is-active{
+	    	@include transition();
+			font-size: 16px;
+			color: #fff;
+			background-color: #007abb;
+	    }
+	}
+	.accordion-item.is-active{
+		.accordion-title{
+			@include transition();
+			font-size: 16px;
+			color: #fff;
+			background-color: #007abb;
+		}
+	}
+	
+	.button.button-azul{
+		&:hover{
+			background-color: $amarelo;
+			color: #000;
+		}
+	}
+}
+	

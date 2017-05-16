@@ -182,3 +182,42 @@
 		return $valid_vars;
 		}
 	add_filter( 'rest_query_vars', 'my_allow_meta_query' );
+
+
+
+function search_filter($query) {
+    if ($query->is_search) {
+    	
+	    $query->set('orderby', "post_title");
+	    $query->set('order', "asc");
+
+	    if(@$_GET['filtro'] === 'post'):
+
+		    $query->set('post_type', array('post','pages','artigos'));
+
+		elseif(@$_GET['filtro'] === 'ncm'):
+
+		    $query->set('post_type', array('ncm'));
+
+		endif;
+
+	    add_filter( 'posts_where', function ( $where, \WP_Query $q )  {
+		    if( ! is_admin() && $q->is_main_query() && $q->is_search()) {
+				$s = @$_GET['s'];
+				$var2 = urldecode($s);
+				$var = preg_replace('/\./', '', $var2);
+				if(is_numeric($var)):
+					$where .= " AND post_title LIKE '$var%'";
+					$where .= " AND post_parent <> 0";
+				else:
+					if(@$_GET['filtro'] != 'post'):
+						$where .= " AND post_parent <> 0";
+					endif;
+					$where .= " AND post_title LIKE '%$var%' ";
+				endif;
+		    }
+		    return $where;
+		}, 10, 2 );
+    }
+}
+add_action('pre_get_posts','search_filter');

@@ -2,7 +2,7 @@
 <?php get_template_part('templates/header') ?>
 
 <section class="row expanded">
-	<section id="content" class="large-12 float-left search-page">
+	<section id="content" class="large-8 float-left search-page">
 		<?php #get_template_part("templates/breadcrumbs" ); ?>
 		<header>
 		<?php
@@ -27,13 +27,29 @@
 					$filtro = "post,page,artigo";
 				}
 			?>
-			<?php echo do_shortcode('[ajax_load_more post_type="' . $filtro . '" button_label="Carregar Mais" button_loading_label="Carregando" order="ASC" orderby="name" search="'. get_search_query() .'"]'); ?>
-		
+			<?php while(have_posts()): the_post(); ?>
+				<ul class="accordion" data-accordion data-allow-all-closed="true">
+					<li class="accordion-item" data-accordion-item>
+						<a href="#" class="accordion-title"><?php the_title(); ?></a>
+						<div class="accordion-content" data-tab-content>
+							<p>
+								<?php $observacao_id = get_post_meta(get_the_ID(), 'observacao')[0] ?>
+								<?php $observacao = get_post($observacao_id); ?>
+								<?php echo wp_trim_words($observacao->post_content, 30); ?>
+							</p>
+							<p>
+								<a class="button button-azul" href="<?php the_permalink(); ?>" >VER MAIS</a>
+							</p>
+						</div>
+					</li>
+				</ul>
+			<?php endwhile; ?>
+
 	</section>
 	<?php #get_sidebar(); ?>
 </section>
 
-<?php get_template_part("templates/noticias"); ?>
-<?php get_template_part("templates/depoimentos"); ?>
+<?php #get_template_part("templates/noticias"); ?>
+<?php #get_template_part("templates/depoimentos"); ?>
 <?php get_template_part("templates/parceiros"); ?>
 <?php get_footer(); ?>	
