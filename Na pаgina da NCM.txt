@@ -1,36 +1,12 @@
 Na página da NCM
 [NIVEL 2]
-** Colocar a data da última atualização
 ** Colocar código CEST, botão, query, inner join MySQL #FazerLogo
 ** Colocar Produtos EAN, botão, query, inner join MySQL #FazerLogo
-** Fazer alguns ajustes na exibição
 ____
-[NIVEL 1]
-Impressão
-** Numero de páginas
-** Logo Ace ICMS
-_____
+
 [NIVEL 4]
 IMportar XML
 ** Fazer o sistema, pegar uma parte já feita
 _____
-[NIVEL 1]
-Página de cursos
-** Mexer no Layout, Do jeito que lista o do aduaneiras. http://cursos.aduaneiras.com.br/.
-_____
-[NIVEL 2]
-CNAES - Campos com números
-** Adcionar um custom field para editar o número e tals.
-_____
-[NIVEL 3]
-Fórum
-** Fazer Fórun, comentários, com post type. TEm que fazer massa
-_____
 [NIVEL 5]
 ** A integração com a forma de pagamento
-
-###############
-
-Ação de hoje: Fórum
-
-Até as 10h, terminar a pagina de cursos

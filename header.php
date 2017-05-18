@@ -30,6 +30,7 @@
 	    SITEURL = '<?php echo site_url(); ?>/';
 	   	AJAXURL = '<?php echo admin_url('admin-ajax.php'); ?>';
 	    AUTHED = <?php echo is_user_logged_in() ? 'true' : 'false'; ?>;
+	    SEARCHQUERY = <?php echo get_search_query() ? get_search_query() : 'false'; ?>;
 	</script>
 
 	<!-- Google Analictics -->

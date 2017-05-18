@@ -266,6 +266,30 @@ add_action('init', function()
     );
 
     register_post_type('legislacao', $args + $default);
+
+        $args = array(
+        'menu_icon' => 'dashicons-editor-ul',
+        'label' => 'CESTs',
+        'labels' => array(
+            'name' => 'CEST',
+            'singular_name' => 'CESTs',
+            'menu_name' => 'CESTs',
+            'name_admin_bar' => 'CESTs',
+            'add_new' => 'Adicionar CEST',
+            'add_new_item' => 'Adicionar nova CESTs',
+            'new_item' => 'Nova CEST',
+            'edit_item' => 'Editar CEST',
+            'view_item' => 'Ver CEST',
+            'all_items' => 'Ver CEST',
+            'search_items' => 'Procurar CEST',
+            'not_found' => 'CEST não encontrado',
+            'not_found_in_trash' => 'CEST não encontrado no lixo'
+        ),
+        'supports' => array('title', 'editor', 'thumbnail'),
+        'menu_position' => -4,
+    );
+
+    register_post_type('cest', $args + $default);
 });
 add_filter('pre_get_posts', 'query_post_type');
 function query_post_type($query) {

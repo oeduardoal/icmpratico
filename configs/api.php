@@ -100,7 +100,7 @@
 								ON $wpdb->posts.ID = $wpdb->postmeta.post_id
 								WHERE ($wpdb->posts.post_title LIKE '$var%'
 								AND $wpdb->posts.post_parent <> 0
-								AND $wpdb->posts.post_type = '$filtro'
+								AND $wpdb->posts.post_type = 'ncm'
 								AND $wpdb->posts.post_status = 'publish')
 								GROUP BY $wpdb->posts.ID
 							");
@@ -112,7 +112,7 @@
 								ON $wpdb->posts.ID = $wpdb->postmeta.post_id
 								WHERE ($wpdb->posts.post_title LIKE '%$var%'
 								AND $wpdb->posts.post_parent <> 0
-								AND $wpdb->posts.post_type = '$filtro'
+								AND $wpdb->posts.post_type = 'ncm'
 								AND $wpdb->posts.post_status = 'publish')
 								GROUP BY $wpdb->posts.ID
 							");
@@ -120,18 +120,64 @@
 					break;
 				
 				case 'post':
-					$postss = $wpdb->get_results("SELECT ID,guid,post_title FROM $wpdb->posts WHERE post_title LIKE '%$var%' AND post_type = 'post' ORDER BY post_title ASC" );
+					$postss = $wpdb->get_results("SELECT ID,guid,post_title FROM $wpdb->posts WHERE post_title LIKE '%$var%' AND post_type IN ('post', 'page','observacao', 'artigo', 'cnae', 'forum', 'professor', 'legislacao') ORDER BY post_title ASC" );
 					break;
+				
+				case 'cnae':
+					// $postss = $wpdb->get_results("SELECT ID,guid,post_title FROM $wpdb->posts WHERE post_title LIKE '%$var%' OR  AND post_type = 'cnae' ORDER BY post_title ASC" );
+
+					if(is_numeric($var)):
+							$postss = $wpdb->get_results("
+								SELECT $wpdb->posts.ID, $wpdb->posts.post_title
+								FROM $wpdb->posts
+								LEFT JOIN $wpdb->postmeta
+								ON $wpdb->posts.ID = $wpdb->postmeta.post_id
+								WHERE ($wpdb->postmeta.meta_value LIKE '$var%'
+								AND $wpdb->posts.post_type = '$filtro'
+								AND $wpdb->posts.post_status = 'publish')
+								GROUP BY $wpdb->posts.ID
+							");
+						else:
+							$postss = $wpdb->get_results("
+								SELECT $wpdb->posts.ID, $wpdb->posts.post_title
+								FROM $wpdb->posts
+								LEFT JOIN $wpdb->postmeta
+								ON $wpdb->posts.ID = $wpdb->postmeta.post_id
+								WHERE ($wpdb->posts.post_title LIKE '%$var%'
+								AND $wpdb->posts.post_type = '$filtro'
+								AND $wpdb->posts.post_status = 'publish')
+								GROUP BY $wpdb->posts.ID
+							");
+						endif;
+
+							
+				break;
 			}
 			
 			if($postss != null){
 				foreach ($postss as $key) {
-				$return[] = array(
-					'id' => $key->ID,
-					'url' => get_the_permalink($key->ID),
-					'title' =>nm($key->post_title)
-					);
+					
+					if($filtro == "cnae"){
+						$array1= array(
+								'id' => $key->ID,
+								'url' => get_the_permalink($key->ID),
+							);
+							$array2 = array(
+								'title' => get_post_meta($key->ID, 'numero')[0] . " - " . nm($key->post_title),
+								'numero_cnae' => get_post_meta($key->ID, 'numero')
+							);
+						$return[] = array_merge($array1, $array2);
+					}else{
+							$return[] = array(
+								'id' => $key->ID,
+								'url' => get_the_permalink($key->ID),
+								'title' => nm($key->post_title)
+							);
+					}
 				};
+
+
+
 			}else{
 				$return = [];
 			}

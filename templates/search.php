@@ -41,9 +41,32 @@
 		</form>
 
 		<!-- Consulta CNAE-ST -->
-		<form action="#" method="#">
+		<form action="<?php bloginfo('siteurl'); ?>" method="GET" name="form" ng-controller="cnae">
 			<span>Consulte a CNAE-ST</span>
-				<input type="text" placeholder="Digite a CNAE desejada" class="input-ncm" name="ncm" required="">
+				<section class="input-results">
+				<input type="hidden" ng-model="filtro" ng-change="getncms()" ng-value="'cnae'" name="filtro" />
+					<input type="text" placeholder="digite a CNAE desejada" ng-model="input" ng-change="getcnaes()" ng-delay="500"  class="input-ncm" name="s" required="">
+					<section class="results" ng-show="input">
+						<picture ng-show="!ncms">
+							<h4>Procurando ...</h4>
+							<img src="<?php echo assetsurl; ?>/assets/img/loader.gif">
+						</picture>
+						<div class="content" ng-show="ncms">
+							<h3>Resultado RÁPIDO da pesquisa</h3><hr>
+								<a href="{{ncm.url}}" ng-repeat="ncm in ncms | limitTo: 10">
+									<section class="result">
+										<h4 ng-bind-html="ncm.title | unsafe"></h4>
+										<p>Leia mais...</p>
+									</section>
+								</a>
+							
+							<button type="submit" class="button button-azulh">Visualizar todos</button>
+						</div>
+						<div class="content" ng-show="vazio">
+							<h4>Nada Encontrado!</h4>
+						</div>
+						</section>
+				</section>
 				<span>
 					<button type="submit" class="button btn-search">Buscar</button>
 				</span>

@@ -188,36 +188,78 @@
 function search_filter($query) {
     if ($query->is_search) {
     	
-	    $query->set('orderby', "post_title");
-	    $query->set('order', "asc");
-
-	    if(@$_GET['filtro'] === 'post'):
-
-		    $query->set('post_type', array('post','pages','artigos'));
-
-		elseif(@$_GET['filtro'] === 'ncm'):
-
-		    $query->set('post_type', array('ncm'));
-
-		endif;
-
+	    
 	    add_filter( 'posts_where', function ( $where, \WP_Query $q )  {
 		    if( ! is_admin() && $q->is_main_query() && $q->is_search()) {
+
+		    	$filtro = @$_GET['filtro'];
+
 				$s = @$_GET['s'];
 				$var2 = urldecode($s);
 				$var = preg_replace('/\./', '', $var2);
+
 				if(is_numeric($var)):
-					$where .= " AND post_title LIKE '$var%'";
-					$where .= " AND post_parent <> 0";
-				else:
-					if(@$_GET['filtro'] != 'post'):
+
+					if($filtro == "ncm"){
+						
+						// Resolve o problema porque o numero está no título...
+
+						$where = " AND post_title LIKE '$var%'";
 						$where .= " AND post_parent <> 0";
+
+
+					}elseif($filtro == "cnae"){
+
+						
+						add_filter( 'posts_join', function($join){
+							$join .= 'INNER JOIN icms_postmeta ON icms_posts.ID = icms_postmeta.post_id';
+							return $join;
+						});
+
+						$where = " AND icms_postmeta.meta_key = 'numero'";
+						$where .= " AND icms_postmeta.meta_value LIKE '$var%'";
+						$where .= " AND icms_posts.post_type = 'cnae'";
+						
+					};
+					
+					if($filtro == "ncm"):
+						$where .= " AND post_parent <> 0";
+						$where .= " AND post_type = 'ncm'";
+					elseif($filtro == 'cnae'):
+						$where .= " AND post_type = 'cnae'";
+					elseif($filtro == 'post'):
+						$where .= "AND icms_posts.post_type IN ('post', 'page','observacao', 'artigo', 'cnae', 'forum', 'professor', 'legislacao')";
 					endif;
-					$where .= " AND post_title LIKE '%$var%' ";
+
+				else:
+
+					// Para letras ...
+					$where = " AND post_title LIKE '%$var%' ";
+
+					// E ainda, para mostrar apenas as ncms com o post_parent, ou seja vinculadas...
+					if(@$_GET['filtro'] == 'ncm'):
+						$where .= " AND post_parent <> 0";
+						$where .= " AND post_type = 'ncm'";
+					elseif($filtro == 'cnae'):
+						$where .= " AND post_type = 'cnae'";
+					elseif($filtro == 'post'):
+						$where .= "AND icms_posts.post_type IN ('post', 'page','observacao', 'artigo', 'cnae', 'forum', 'professor', 'legislacao')";
+					endif;
+
 				endif;
+
 		    }
+
 		    return $where;
 		}, 10, 2 );
+
+		
+					$query->set('orderby', "post_title");
+					$query->set('order', "asc");
+	    
+		// add_filter( 'posts_request', function($request){
+		// 	echo $request;
+		// });
     }
 }
 add_action('pre_get_posts','search_filter');

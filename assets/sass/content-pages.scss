@@ -356,4 +356,33 @@
 		}
 	}
 }
+.search-resultados{
+	.result{
+		border: solid 2px #ccc;
+		padding: 1rem;
+		margin-bottom: 2rem;
+	}
+	margin: 4rem 0;
 	
+}
+.cnae_main{
+	p{
+		strong a{
+			color: $azul;
+			&:hover{color: $azulh;}
+		}
+		margin-bottom: 5px;
+	}
+}
+
+.numero_cnae,.fonte_legal{
+	b{
+		font-weight: 800;
+		color: $azulh;
+	}
+}
+.single-cnae{
+	#content h1:after, #content h2:after, #content h3:after, #content h4:after, #content h5:after, #content h6:after{
+		display: none;
+	}
+}

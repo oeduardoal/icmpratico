@@ -1,4 +1,4 @@
-app.factory('NCMS',function($http, $timeout,configs){
+app.factory('GETAPI',function($http, $timeout,configs){
 
 	var ncms;
 	var obj = {};

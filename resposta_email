@@ -1,0 +1,34 @@
+c) Em alguns tópicos a configuração não ficou boa, exemplo: Substituição tributária, tem 3 menus, só aparecem 2 acima, o 3º está aparecendo abaixo do 1º;
+** Optei por refazer o menu, espero que goste agora. Analise.
+R: As colunas com menos conteúdos foram ajustadas. 
+
+2. Página principal:
+a) No buscador da NCM trazê-las em ordem numérica;
+** Configuração feita.
+R: Foi refeita toda a parte de pesquisa das NCMs, está funcionando da seguinte maneira:
+Caso o usuário digite um número, o buscador pesquisará as NCMs começando com aquele número, trazendo os resultados do menor para o maior.
+Caso o usuário digite letras, o buscador pesquisará as NCMs que contém as letras em alguma palavra. 
+
+b) Os buscadores não estão funcionando corretamente (NCM, TODO SITE... - vide prints);
+** Problema resolvido. Por favor testar! Aguardo Resposta.
+R: Como disse anteriormente, os buscadores NCM foram refeitos agora mais específicos... 
+
+2. Como está o andamento do CEST? e do código EAN?
+R: Atividade em andamento, preparação para o recebimento da tabela. Por enquanto estou ajustando para a tabela atual do site... Por favor mandar as tabelas de CEST e EANs.
+
+5. Quando poderemos testar o buscador xml? e a consulta CNAE?
+R: Consulta CNAE foi concluída hoje. O buscador XML será realizado assim que concluir as CESTs e EANs;
+
+6. Os textos das páginas estão desconfiguradas, entro no página, mas não é possível a visualização nem edição, quando estará disponível? o mesmo para os demais itens (observações, posts, ...);
+R: Era um BUG do próprio WordPress, foi resolvido. Agora é possível editar o conteúdo no modo 'visual'
+
+7. E sobre aqueles itens que você tinha anotado alguma previsão (layout cursos, etc...) ?
+R: Tratar com o Sr. Esaú.
+
+#################################
+
+3. A importação da NCM e vinculação das observações será feita quando?
+NCM tem 16.814 itens, no stage só constam 10.226 cadastrados (vide print NCM cadastradas).Importar a base de dados da NCM do site atual para trazer as NCM incluídas.
+
+4. Ainda com relação a NCM, deu certo aquela junção dos títulos e subtítulos para as consultas?
+Eduardo irá fazer conforme foi ajustado com Cristina, iniciando junção a partir dos 4 dígitos e finalizando nos 8 dígitos.
