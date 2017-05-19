@@ -1,0 +1,41 @@
+@import 'styles';
+
+.single-ncm{
+	#content h1, #content h2, #content h3, #content h4, #content h5, #content h6{
+		color: $azulh;
+		&:after{
+			background-color: $azulh;
+		}
+	}
+
+}
+
+section.tree{
+	ul{
+		background-color: #fff !important;
+	}
+	li{
+		margin-bottom: 5px;
+		a,a:hover{
+			background-color: #fff !important;
+			color: $azulh !important;
+			border: none !important;
+		    padding: 0.7rem 1rem;
+		}
+	}
+	li.item-ncm-0{
+		margin-left: 0rem;
+	}
+	li.item-ncm-1{
+		margin-left: 1rem;
+	}
+	li.item-ncm-2{
+		margin-left: 2rem;
+	}
+	li.item-ncm-3{
+		margin-left: 3rem;
+	}
+	li.item-ncm-4{
+		margin-left: 4rem;
+	}
+}

@@ -8,7 +8,6 @@ app.controller('main', ['$scope', '$http','$timeout','GETAPI',function($scope,$h
 			$scope.ncms = data.data;
 			$scope.loading = false;
 		});
-		
 	}
 	
 	var input = $scope.input;
@@ -26,7 +25,6 @@ app.controller('cnae', ['$scope', '$http','$timeout','GETAPI',function($scope,$h
 			$scope.ncms = data.data;
 			$scope.loading = false;
 		});
-		
 	}
 	
 

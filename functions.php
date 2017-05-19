@@ -1,5 +1,8 @@
 <?php
 	
+	ini_set('memory_limit', '2048M');
+
+
 	// No FTP
 	define('FS_METHOD', 'direct');
 
