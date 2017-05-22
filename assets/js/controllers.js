@@ -20,12 +20,12 @@ app.controller('main', ['$scope', '$http','$timeout','GETAPI',function($scope,$h
 	$scope.submit = function(){
 		if($scope.input.length >= 8){
 			console.log('8 NUMEROS');
-			window.location = document.URL + "/" + $scope.input;
+			window.location = document.location.origin + "/" + $scope.input;
 		}else{
-			window.location = document.URL + "?filtro=" + $scope.filtro + "&" + "s=" + $scope.input;
+			window.location = document.location.origin + "?filtro=" + $scope.filtro + "&" + "s=" + $scope.input;
 			$scope.method = "GET";
 			var el = angular.element('#form_ncm');
-			el.attr('action',document.URL);	
+			el.attr('action',document.location.origin);	
 			el.attr('method', "GET");	
 		}
 	}
