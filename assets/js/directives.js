@@ -30,3 +30,16 @@ app.directive('ngDelay', ['$timeout', function ($timeout) {
         }
     };
 }]);
+
+app.directive("submit", [function () {
+    return {
+        scope: {
+            submit: "="
+        },
+        link: function (scope, element, attributes) {
+            element.bind("submit", function (loadEvent) {
+                return scope.submit(loadEvent);
+            });
+        }
+    }
+}]);

@@ -56,7 +56,7 @@ function getHierarquiaTitulo($postID, $separator = ' <br/> ')
     $a=0;
     foreach ($var as $key) {
             echo "<li class='accordion-item item-ncm-" . $a . "' data-accordion-item>";
-                echo "<a class='accordion-title'>" . $key['ncm_title'] . "</a>";
+                echo "<span class='accordion-title'>" . $key['ncm_title'] . "</span>";
             echo "</li>";
         $a++;
     }

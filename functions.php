@@ -208,7 +208,9 @@ function search_filter($query) {
 						// Resolve o problema porque o numero está no título...
 
 						$where = " AND post_title LIKE '$var%'";
-						$where .= " AND post_parent <> 0";
+
+						// OBS
+						// $where .= " AND post_parent <> 0";
 
 
 					}elseif($filtro == "cnae"){
@@ -226,7 +228,7 @@ function search_filter($query) {
 					};
 					
 					if($filtro == "ncm"):
-						$where .= " AND post_parent <> 0";
+						// $where .= " AND post_parent <> 0";
 						$where .= " AND post_type = 'ncm'";
 					elseif($filtro == 'cnae'):
 						$where .= " AND post_type = 'cnae'";
@@ -241,7 +243,7 @@ function search_filter($query) {
 
 					// E ainda, para mostrar apenas as ncms com o post_parent, ou seja vinculadas...
 					if(@$_GET['filtro'] == 'ncm'):
-						$where .= " AND post_parent <> 0";
+						// $where .= " AND post_parent <> 0";
 						$where .= " AND post_type = 'ncm'";
 					elseif($filtro == 'cnae'):
 						$where .= " AND post_type = 'cnae'";

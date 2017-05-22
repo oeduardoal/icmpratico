@@ -13,10 +13,11 @@
 section.tree{
 	ul{
 		background-color: #fff !important;
+		margin-bottom: 0px;
 	}
 	li{
 		margin-bottom: 5px;
-		a,a:hover{
+		.accordion-title,.accordion-title:hover{
 			background-color: #fff !important;
 			color: $azulh !important;
 			border: none !important;

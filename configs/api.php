@@ -99,10 +99,10 @@
 								LEFT JOIN $wpdb->postmeta
 								ON $wpdb->posts.ID = $wpdb->postmeta.post_id
 								WHERE ($wpdb->posts.post_title LIKE '$var%'
-								AND $wpdb->posts.post_parent <> 0
 								AND $wpdb->posts.post_type = 'ncm'
 								AND $wpdb->posts.post_status = 'publish')
 								GROUP BY $wpdb->posts.ID
+								LIMIT 10
 							");
 						else:
 							$postss = $wpdb->get_results("
@@ -111,16 +111,16 @@
 								LEFT JOIN $wpdb->postmeta
 								ON $wpdb->posts.ID = $wpdb->postmeta.post_id
 								WHERE ($wpdb->posts.post_title LIKE '%$var%'
-								AND $wpdb->posts.post_parent <> 0
 								AND $wpdb->posts.post_type = 'ncm'
 								AND $wpdb->posts.post_status = 'publish')
 								GROUP BY $wpdb->posts.ID
+								LIMIT 10
 							");
 						endif;
 					break;
 				
 				case 'post':
-					$postss = $wpdb->get_results("SELECT ID,guid,post_title FROM $wpdb->posts WHERE post_title LIKE '%$var%' AND post_type IN ('post', 'page','observacao', 'artigo', 'cnae', 'forum', 'professor', 'legislacao') ORDER BY post_title ASC" );
+					$postss = $wpdb->get_results("SELECT ID,guid,post_title FROM $wpdb->posts WHERE post_title LIKE '%$var%' AND post_type IN ('post', 'page','observacao', 'artigo', 'cnae', 'forum', 'professor', 'legislacao') ORDER BY post_title ASC LIMIT 10" );
 					break;
 				
 				case 'cnae':
@@ -136,6 +136,8 @@
 								AND $wpdb->posts.post_type = '$filtro'
 								AND $wpdb->posts.post_status = 'publish')
 								GROUP BY $wpdb->posts.ID
+								ORDER BY $wpdb->posts.post_title ASC
+								LIMIT 10
 							");
 						else:
 							$postss = $wpdb->get_results("
@@ -147,6 +149,8 @@
 								AND $wpdb->posts.post_type = '$filtro'
 								AND $wpdb->posts.post_status = 'publish')
 								GROUP BY $wpdb->posts.ID
+								ORDER BY $wpdb->posts.post_title ASC
+								LIMIT 10
 							");
 						endif;
 

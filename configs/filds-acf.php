@@ -61,7 +61,20 @@ if(function_exists("register_field_group"))
 				'display_format' => 'dd/mm/yy',
 				'first_day' => 1,
 			),
-			
+			array (
+				'key' => 'field_5790c2bb68e7f',
+				'label' => 'Terceiro Lote - Valor',
+				'name' => 'terceiro_lote_valor',
+				'type' => 'number',
+				'instructions' => 'Insira o valor do TERCEIRO LOTE a ser disponibilizado',
+				'default_value' => '',
+				'placeholder' => '',
+				'prepend' => '',
+				'append' => '',
+				'min' => '',
+				'max' => '',
+				'step' => '',
+			),
 			array (
 				'key' => 'field_578e30c1dab8e',
 				'label' => 'Professores',

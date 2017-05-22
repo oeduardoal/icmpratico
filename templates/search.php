@@ -3,7 +3,7 @@
 	<div class="row">
 
 		<!-- Buscador Prático -->
-		<form action="<?php bloginfo('siteurl'); ?>" method="GET" name="form" ng-controller="main">
+		<form name="form" ng-controller="main" ng-submit="submit()"  id="form_ncm">
 				<span>Buscador prático</span>
 				<section class="filtros">
 					<input type="radio" ng-model="filtro" ng-change="getncms()" ng-value="'ncm'" name="filtro" />
@@ -19,7 +19,7 @@
 							<img src="<?php echo assetsurl; ?>/assets/img/loader.gif">
 						</picture>
 						<div class="content" ng-show="ncms">
-							<h3>Resultado RÁPIDO da pesquisa</h3><hr>
+							<h3>Resultado RÁPIDO da pesquisa: {{input}}</h3><hr>
 								<a href="{{ncm.url}}" ng-repeat="ncm in ncms">
 									<section class="result">
 										<h4 ng-bind-html="ncm.title | unsafe"></h4>
@@ -27,7 +27,7 @@
 									</section>
 								</a>
 							
-							<button type="submit" class="button button-azulh">Visualizar todos</button>
+							<button type="submit" class="button button-azulh" ng-click="clic">Visualizar todos</button>
 						</div>
 						<div class="content" ng-show="vazio">
 							<h4>Nada Encontrado!</h4>

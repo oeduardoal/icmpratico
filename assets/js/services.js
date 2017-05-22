@@ -28,3 +28,4 @@ app.filter('trim', function () {
 app.filter('escape', function() {
   return window.encodeURIComponent;
 });
+
