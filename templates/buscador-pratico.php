@@ -7,7 +7,7 @@
 	<div class="row">
 
 		<!-- Buscador Prático -->
-		<form action="<?php bloginfo('siteurl'); ?>" method="GET" name="form" class="large-4 columns"  ng-controller="main" >
+		<form name="form" ng-controller="main" ng-submit="submit()"  id="form_ncm" class="large-4 columns">
 				<span>Buscador prático</span>
 				<section class="filtros">
 					<input type="radio" ng-model="filtro" ng-change="getncms()" ng-value="'ncm'" name="filtro" />
@@ -15,15 +15,15 @@
 					<input type="radio" ng-model="filtro" ng-change="getncms()"  ng-value="'post'" name="filtro" />
 					<label for="all">Em todo o site</label>
 		    	</section>
-				<section class="input-results" ng-form="myForm">
-					<input type="text" placeholder="Digite a NCM ou palavra" ng-model="input" ng-change="getncms()" ng-delay="500"  class="input-ncm" name="s" required="" >
+				<section class="input-results">
+					<input type="text" placeholder="Digite a NCM ou palavra" ng-model="input" ng-change="getncms()" ng-delay="500"  class="input-ncm" name="s" required="">
 					<section class="results" ng-show="input">
 						<picture ng-show="!ncms">
 							<h4>Procurando ...</h4>
 							<img src="<?php echo assetsurl; ?>/assets/img/loader.gif">
 						</picture>
 						<div class="content" ng-show="ncms">
-							<h3>Resultado RÁPIDO da pesquisa</h3><hr>
+							<h3>Resultado RÁPIDO da pesquisa: {{input}}</h3><hr>
 								<a href="{{ncm.url}}" ng-repeat="ncm in ncms">
 									<section class="result">
 										<h4 ng-bind-html="ncm.title | unsafe"></h4>
@@ -31,7 +31,7 @@
 									</section>
 								</a>
 							
-							<button type="submit" class="button button-azulh">Visualizar todos</button>
+							<button type="submit" class="button button-azulh" ng-click="clic">Visualizar todos</button>
 						</div>
 						<div class="content" ng-show="vazio">
 							<h4>Nada Encontrado!</h4>
@@ -41,7 +41,6 @@
 				<span>
 					<button type="submit" class="button btn-search">Buscar</button>
 				</span>
-			
 		</form>
 
 		<form action="<?php bloginfo('siteurl'); ?>" method="GET" name="form" class="large-4 columns"   ng-controller="cnae" style="margin-top: 15px;">
