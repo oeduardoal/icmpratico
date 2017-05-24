@@ -17,6 +17,7 @@
 				'numero_da_ncm' => get_post_meta(get_the_ID(), 'numero_da_ncm')[0],
 				'descricao_da_ncm' => get_post_meta(get_the_ID(), 'descricao_da_ncm')[0],
 				'observacao_id' => get_post_meta(get_the_ID(), 'observacao')[0],
+				'titulo_observacao' => get_the_title(get_post_meta(get_the_ID(), 'observacao')[0]),
 		);
 	}
 	##########################################################
