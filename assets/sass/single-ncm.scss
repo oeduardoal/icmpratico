@@ -7,36 +7,36 @@
 			background-color: $azulh;
 		}
 	}
-
 }
-
-section.tree{
-	ul{
-		background-color: #fff !important;
-		margin-bottom: 0px;
-	}
-	li{
-		margin-bottom: 5px;
-		.accordion-title,.accordion-title:hover{
+.single-ncm,.post-type-archive-ncm,.search-resultados{
+	section.tree{
+		ul{
 			background-color: #fff !important;
-			color: $azulh !important;
-			border: none !important;
-		    padding: 0.7rem 1rem;
+			margin-bottom: 0px;
 		}
-	}
-	li.item-ncm-0{
-		margin-left: 0rem;
-	}
-	li.item-ncm-1{
-		margin-left: 1rem;
-	}
-	li.item-ncm-2{
-		margin-left: 2rem;
-	}
-	li.item-ncm-3{
-		margin-left: 3rem;
-	}
-	li.item-ncm-4{
-		margin-left: 4rem;
+		li{
+			margin-bottom: 5px;
+			.accordion-title,.accordion-title:hover{
+				background-color: #fff !important;
+				color: $azulh !important;
+				border: none !important;
+			    padding: 0.7rem 1rem;
+			}
+		}
+		li.item-ncm-0{
+			margin-left: 0rem;
+		}
+		li.item-ncm-1{
+			margin-left: 1rem;
+		}
+		li.item-ncm-2{
+			margin-left: 2rem;
+		}
+		li.item-ncm-3{
+			margin-left: 3rem;
+		}
+		li.item-ncm-4{
+			margin-left: 4rem;
+		}
 	}
 }

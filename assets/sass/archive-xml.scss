@@ -1,0 +1,42 @@
+@import 'styles';
+
+.post-type-archive-xml{
+	.xml-form{
+		h3,h4,h5,h6{
+			color: $azul;
+			text-transform: uppercase;
+			font-weight: 600;
+			margin-bottom: 0px;
+		}
+	}
+	.accordion .accordion-title{
+		font-size: 14px;
+	}
+	.accordion .accordion-item.is-active .accordion-title, .accordion .accordion-title.is-active, .accordion .accordion-title:hover{
+		font-size: 14px;
+	}
+	.xml-lista{
+		.callout .title-xml{
+			float: left;
+		}
+		.button.alert{
+			top: 0px;
+			right: 0px;
+
+		}
+	}
+	.modal-xml{
+		position: relative;
+		background-color: #FFF;
+		max-width: 570px;
+		h4{
+			color: #3379bb;
+		    font-weight: 600;
+		    text-transform: uppercase;
+		    margin-bottom: 0px;
+		}
+		p{
+			color: $cinzap;
+		}
+	}
+}

@@ -62,3 +62,11 @@ function getHierarquiaTitulo($postID, $separator = ' <br/> ')
     }
         
 }
+function getPostNcm($ncm)
+{
+    global $wpdb;
+
+    $row = $wpdb->get_row( $sql = "SELECT * FROM icms_posts INNER JOIN icms_postmeta ON icms_posts.ID = icms_postmeta.post_id AND icms_postmeta.meta_value = '{$ncm}' AND icms_posts.post_status = 'publish'" );
+
+    return ! empty($row) ? $row : false;
+}

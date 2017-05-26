@@ -236,7 +236,6 @@ input,input:hover,input:active,input:focus{box-shadow: none !important;border: n
 }
 
 
-
 @mixin button-outline($color){
 	background-color: transparent;
 	border: solid 1px $color;
@@ -246,6 +245,9 @@ input,input:hover,input:active,input:focus{box-shadow: none !important;border: n
 	background-color: $azul;
 	color: #fff;
 	border: solid 1px $azul;
+}
+.btnoutline,.btnoutline:hover{
+	@include button-outline($azulh);
 }
 	.btn-nav{
 		background-color: #fff;

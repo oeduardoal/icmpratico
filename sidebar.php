@@ -1,8 +1,10 @@
-	<section id="widgets" class="large-4 float-right" style="position: relative;">
-		
+<section id="widgets" class="large-4 float-right" style="position: relative;">
+	
+	<?php get_template_part("templates/propaganda_parceiros"); ?>
+	
 		<div > 
 			<?php if(is_singular(array('post')) || is_page()): ?>
-				<section class="large-12 columns widget">
+				<section class="large-12 columns widget" style="position: relative;">
 						<button class="button button-toggle" style="position: absolute;right: 0;top: 0;">
 							<i class="fa fa-angle-right"></i>
 						</button>

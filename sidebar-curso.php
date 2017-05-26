@@ -1,5 +1,4 @@
 <section id="widgets" class="large-4 float-right" style="position: relative;">
-	
 	<?php if(is_single()): ?>
 	<a href="<?php echo get_field('url_ead') ?>" target="_blank" id="inscrever" class="large-12 columns no-padding inscrever">CLIQUE AQUI E SE INSCREVA</a>
 	<?php endif; ?>

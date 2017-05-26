@@ -3,6 +3,7 @@
 		$('.loader-page').fadeOut(1000);
 	})
 	$(document).ready(function() {
+
 			$(document).foundation();
 			console.log("Desenvolvido por Eduardo Almeida :D");
 			var slider_noticias = $('.slider-noticias').owlCarousel({
@@ -68,6 +69,27 @@
 			        }
 			    }
 			});
+			var slider_parceiros = $('.slider-parceiros-propaganda').owlCarousel({
+				loop:true,
+			    nav:false,
+			    dots:false,
+				autoplayTimeout:2000,
+				autoplay:true,
+			    responsive:{
+			        0:{
+			            items:1
+			        },
+			        600:{
+			            items:1
+			        },
+			        800:{
+			            items:1
+			        },
+			        1000:{
+			            items:1
+			        }
+			    }
+			});
 			var slider_cursos = $('#slider-cursos').owlCarousel({
 				loop:true,
 			    nav:false,
@@ -109,28 +131,22 @@
 			})
 			$('#parceiros .btn-right').click(function() {
 				slider_parceiros.trigger('next.owl.carousel');
-			})
-			
+			})	
 			// $("html").niceScroll();
-
-
 			$('button.button-toggle').click(function(){
 				$('#content').toggleClass('large-10');
 				$('#widgets').toggleClass('large-4').toggleClass('large-2');
 			})
-
 			$('#toggle-search').click(function(){
 				var p = $('#toggle-search').attr("data-toggle")
 				$('#' + p).toggleClass('toggle-show');
 				console.log(p);
 			})
-
 			$('.link-close').click(function(e){
 				e.preventDefault();
 				$('#modal-create').foundation('close');
 				$('#modal-login').foundation('close');
-			})
- 				
+			})	
 			$('.modal-login').click(function(e){
  				e.preventDefault();
  				 $('#modal-create').foundation('close');
@@ -143,33 +159,33 @@
  				 $(".callout.message").hide();
 			})
 
-			// $('a, button, .btn-search, .content, .owl-item, #responsive-menu-container').not('.logo, #scrollToTop, .esqueceu-senha , .modal-create , #modal-login , #create-account-button, #logo-icms a , #responsive-menu-button ,#depoimentos a, #inscrever ,#depoimentos button, .widget ,.link-close , .button-toggle, [href*="/curso/"]').click(function(e){
-		 //        if(!AUTHED )
-		 //        {
-		 //            e.preventDefault();
+			$('a, button, .btn-search, .content, .owl-item, #responsive-menu-container').not('.logo, #scrollToTop, .esqueceu-senha , .modal-create , #modal-login , #create-account-button, #logo-icms a , #responsive-menu-button ,#depoimentos a, #inscrever ,#depoimentos button, .widget ,.link-close , .button-toggle, [href*="/curso/"]').click(function(e){
+		        if(!AUTHED )
+		        {
+		            e.preventDefault();
 
-		 //            var redirect_to = '';
+		            var redirect_to = '';
 
-		 //            if( $(this).is('a') )
-		 //                redirect_to = $(this).attr('href');
+		            if( $(this).is('a') )
+		                redirect_to = $(this).attr('href');
 
-		 //            if( $(this).is('button') )
-		 //                redirect_to =	 $(this).parents('form').attr('action');
+		            if( $(this).is('button') )
+		                redirect_to =	 $(this).parents('form').attr('action');
 
-		 //            if( ! redirect_to )
-		 //                redirect_to = window.location.href;
+		            if( ! redirect_to )
+		                redirect_to = window.location.href;
 
-		 //            $('[name=redirect_to]').val(redirect_to);
+		            $('[name=redirect_to]').val(redirect_to);
 
 
-		 //           $('#modal-create').foundation('close');
-		 //           $('#modal-login').foundation('close');
-		 //        }
-		 //    });
+		           $('#modal-create').foundation('close');
+		           $('#modal-login').foundation('open');
+		        }
+		    });
 			
-			// if(!AUTHED){
-			// 	$('#modal-login').foundation('open');
-			// }
+			if(!AUTHED){
+				$('#modal-login').foundation('open');
+			}
 
 			$('#user_login').attr('placeholder', 'Login').attr('autofocus', '<true></true>');
     		$('#user_pass').attr('placeholder', 'Senha');
@@ -251,6 +267,24 @@
 					}
 				})
 			})
+			
+			// Remove XML
+			$('button.excluir-xml').on('click',function(e){
+				e.preventDefault();
+				var title = $(this).attr('data-xml');
+				$('#arquivo-xml').val(title);
+				$('#excluir-xml').foundation('open');
+			})
+
+			
+				$("#arquivo").change(function (e){
+			       var fileName = $(this).val();
+			       console.log(e);
+			       $("label[for=arquivo]").text(e.target.files[0].name);
+			       $(".xml-form button[type=submit]").addClass('warning');
+			     });
+			
+
 	})
 })(jQuery);
 

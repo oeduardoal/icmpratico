@@ -14,6 +14,8 @@
 	foreach(glob(get_template_directory() . "/configs/*.php") as $filename)
     require_once $filename;
 
+    require_once get_template_directory() . "/vendor/PHPExcel.php";
+
 	####################################################
 	
 	// CONSTANTES

@@ -51,5 +51,5 @@
 		
 	</div>
 </section>
-<?php get_template_part("templates/parceiros"); ?>
+<?php #get_template_part("templates/parceiros"); ?>
 <?php get_footer(); ?>	
