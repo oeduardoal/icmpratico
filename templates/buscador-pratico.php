@@ -75,9 +75,9 @@
 		</form>
 
 		<!-- Importar XML -->
-		<form action="#" method="#"  class="large-4 columns"  style="margin-top: 15px;">
+		<form action="<?php bloginfo('siteurl'); ?>/xml" method="GET" class="large-4 columns" style="margin-top: 15px">
 			<span>Importar XML</span>
-				<input type="text" placeholder="Informe o nome do XML" class="input-ncm" name="ncm" required="required">
+				<input type="text" placeholder="Informe o nome do XML" class="input-ncm" name="arquivo" required="">
 				<span>
 					<button type="submit" class="button btn-search">Buscar</button>
 				</span>
