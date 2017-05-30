@@ -7,6 +7,10 @@
 			background-color: $azulh;
 		}
 	}
+	.reveal{
+		max-width: none;
+		position: relative;
+	}
 }
 .single-ncm,.post-type-archive-ncm,.search-resultados{
 	section.tree{

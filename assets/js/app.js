@@ -159,7 +159,7 @@
  				 $(".callout.message").hide();
 			})
 
-			$('a, button, .btn-search, .content, .owl-item, #responsive-menu-container').not('.logo, #scrollToTop, .esqueceu-senha , .modal-create , #modal-login , #create-account-button, #logo-icms a , #responsive-menu-button ,#depoimentos a, #inscrever ,#depoimentos button, .widget ,.link-close , .button-toggle, [href*="/curso/"]').click(function(e){
+			$('a, button, .btn-search, .content, .owl-item, #responsive-menu-container, .mega-menu-link').not('.logo, #scrollToTop, .esqueceu-senha , .modal-create , #modal-login , #create-account-button, #logo-icms a , #responsive-menu-button ,#depoimentos a, #inscrever ,#depoimentos button, .widget ,.link-close , .button-toggle, [href*="/curso/"]').click(function(e){
 		        if(!AUTHED )
 		        {
 		            e.preventDefault();

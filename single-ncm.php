@@ -6,14 +6,19 @@
 <section class="row expanded">
 	<section id="content" class="large-8 float-left single single-id-<?php the_ID(); ?>">
 		<?php get_template_part("templates/breadcrumbs" ); ?>
-		
+
+	
 		<section class="tree">
 		<h6>Essa NCM está em: </h6>
 		<ul class="accordion hierarquia" data-accordion>
 			<?php echo getHierarquiaTitulo(get_the_ID()); ?>
 		</ul>
+		<br>
+		
 		</section>
 
+		<?php get_template_part("templates/cests_eans"); ?>
+		
 		<header>
 			<h3><?php the_title() ?></h3>
 		</header>

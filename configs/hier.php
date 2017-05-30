@@ -70,3 +70,14 @@ function getPostNcm($ncm)
 
     return ! empty($row) ? $row : false;
 }
+
+function getCests($id)
+{
+    global $wpdb;
+    $capitulo = substr($id, 0, 2);
+
+     $sql = "SELECT ID FROM icms_postmeta INNER JOIN icms_posts ON icms_postmeta.post_id = icms_posts.ID WHERE icms_postmeta.meta_value = '$capitulo' OR  icms_postmeta.meta_value = '$id' AND icms_posts.post_type = 'cest'";
+    $row = $wpdb->get_results($sql);
+
+    return $row ?? false;
+}
