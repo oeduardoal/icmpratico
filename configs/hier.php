@@ -75,9 +75,11 @@ function getCests($id)
 {
     global $wpdb;
     $capitulo = substr($id, 0, 2);
+    $cap4 = substr($id, 0, 4);
 
-     $sql = "SELECT ID FROM icms_postmeta INNER JOIN icms_posts ON icms_postmeta.post_id = icms_posts.ID WHERE icms_postmeta.meta_value = '$capitulo' OR  icms_postmeta.meta_value = '$id' AND icms_posts.post_type = 'cest'";
+     $sql = "SELECT ID FROM icms_postmeta INNER JOIN icms_posts ON icms_postmeta.post_id = icms_posts.ID WHERE (icms_postmeta.meta_value = '$capitulo' OR icms_postmeta.meta_value = '$cap4' OR  icms_postmeta.meta_value = '$id') AND icms_posts.post_type = 'cest'";
     $row = $wpdb->get_results($sql);
 
     return $row;
 }
+

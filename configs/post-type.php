@@ -286,6 +286,7 @@ add_action('init', function()
             'not_found_in_trash' => 'CEST não encontrado no lixo'
         ),
         'supports' => array('title', 'editor', 'thumbnail'),
+        'taxonomies' => array('category'),
         'menu_position' => -4,
     );
 

@@ -7,9 +7,22 @@
 			background-color: $azulh;
 		}
 	}
-	.reveal{
+	.reveal#cests_modal{
 		max-width: none;
 		position: relative;
+		max-width: 60%;
+		min-width: 60%;
+	}
+	.head-table{
+		background-color: $azulh;
+			color: #FFF;
+		&:hover{
+			background-color: $azulh;
+			color: #FFF;
+		}
+		th{
+				text-align: center;
+		}	
 	}
 }
 .single-ncm,.post-type-archive-ncm,.search-resultados{

@@ -399,7 +399,7 @@ if(function_exists("register_field_group"))
 				8 => 'author',
 				9 => 'format',
 				10 => 'featured_image',
-				11 => 'categories',
+				// 11 => 'categories',
 				12 => 'tags',
 				13 => 'send-trackbacks',
 			),
