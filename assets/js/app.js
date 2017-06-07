@@ -2,7 +2,6 @@
 
 	$(window).load(function(){
 		$('.loader-page').fadeOut(1000);
-
 	})
 	$(document).ready(function() {
 			
@@ -97,7 +96,7 @@
 			    nav:false,
 			    dots:false,
 			    autoplayTimeout:2500,
-			    autoplay:false,
+			    autoplay:true,
 			    responsive:{
 			        0:{
 			            items:1
@@ -110,6 +109,28 @@
 			        },
 			        1000:{
 			            items:4
+			        }
+			    }
+			});
+			var slider_cursos = $('#slide-professores').owlCarousel({
+				loop:true,
+			    nav:false,
+			    dots:true,
+			    autoplayTimeout:3000,
+			    autoplay:true,
+			    // autoplayHoverPause: true,
+			    responsive:{
+			        0:{
+			            items:1
+			        },
+			        600:{
+			            items:1
+			        },
+			        800:{
+			            items:1
+			        },
+			        1000:{
+			            items:1
 			        }
 			    }
 			});
@@ -279,26 +300,29 @@
 			})
 
 			
-				var content = $("#conteudo_programatico");
-				var lista = $("#conteudo_programatico > ul");
-				var item = $("#conteudo_programatico > ul > li");
-				var item_title = $("#conteudo_programatico > ul > li > strong");
-				var item_content = $("#conteudo_programatico > ul > li > ul");
-				lista.addClass("accordion");
-				lista.attr("data-accordion", "");
-				lista.attr("role", "tablist");
-				lista.attr("data-allow-all-closed", "true");
-				item.addClass("accordion-item");
-				item.attr("data-accordion-item","");
-				item_title.addClass("accordion-title");
-				item_content.addClass("accordion-content");
-				item_content.attr("data-tab-content","");
+				// var content = $("#conteudo_programatico");
+				// var lista = $("#conteudo_programatico > ul");
+				// var item = $("#conteudo_programatico > ul > li");
+				// var item_title = $("#conteudo_programatico > ul > li > strong");
+				// var item_content = $("#conteudo_programatico > ul > li > ul");
+				// lista.addClass("accordion");
+				// lista.attr("data-accordion", "");
+				// lista.attr("role", "tablist");
+				// lista.attr("data-allow-all-closed", "true");
+				// item.addClass("accordion-item");
+				// item.attr("data-accordion-item","");
+				// item_title.addClass("accordion-title");
+				// item_content.addClass("accordion-content");
+				// item_content.attr("data-tab-content","");
+				
 
-				$("#conteudo_programatico > ul > li").each(function(i){
-					var title = $(this).find("strong").text()
-					$(this).find("strong").replaceWith("<a class='accordion-title'>" + title +"</a>");
-				})
-				$("#conteudo_programatico").foundation();
+				// $("#conteudo_programatico > ul > li").each(function(i){
+				// 	var title = $(this).find("strong").text()
+				// 	$(this).find("strong").replaceWith("<a class='accordion-title'>" + title +"</a>");
+				// })
+
+				// Foundation.reInit($("[data-accordion]"));
+				
 
 				$("#arquivo").change(function (e){
 			       var fileName = $(this).val();
@@ -306,8 +330,6 @@
 			       $("label[for=arquivo]").text(e.target.files[0].name);
 			       $(".xml-form button[type=submit]").addClass('warning');
 			     });
-			
-
 	})
 })(jQuery);
 

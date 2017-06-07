@@ -33,6 +33,6 @@
 	</section>
 	<!-- Scripts Footer -->
 	<?php wp_footer(); ?>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.6.8-fix/jquery.nicescroll.min.js"></script>
+	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.6.8-fix/jquery.nicescroll.min.js"></script> -->
 	</footer>
 </html>

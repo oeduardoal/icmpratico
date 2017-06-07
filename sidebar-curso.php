@@ -76,6 +76,28 @@
 		</main>
 	</section>
 	<?php endif; ?>
+	<section class="large-12 columns widget widget-cursos" >
+				<header>
+					<h6>Cursos com Inscrições Abertas</h6>
+				</header>
+				<main>
+					<ul>
+					<?php $argsc = array('post_type' => 'curso','posts_per_page'=>3); ?>
+					<?php $cursos = new WP_Query($argsc); ?>
+					<?php
+						while($cursos->have_posts()):
+						$cursos->the_post();
+					?>
+						<li>
+							<h6><?php the_title(); ?></h6>
+							<p><?php echo wp_trim_words(get_the_excerpt(), 15); ?></p>
+							<a href="<?php the_permalink(); ?>">Mais Informações</a>
+						</li>
+					<?php wp_reset_postdata(); endwhile;?>
+					</ul>
+					<a href="<?php echo get_post_type_archive_link("curso"); ?>" class="button button-azul large expanded" style="color: #FFF !important;">VER TODOS OS CURSOS</a>
+				</main>
+			</section>
 			
 	<?php if(is_single()): ?>
 	<a href="<?php echo get_field('url_ead') ?>" target="_blank" id="inscrever" class="large-12 columns no-padding inscrever">CLIQUE AQUI E SE INSCREVA</a>

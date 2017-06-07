@@ -36,7 +36,7 @@
 			
 
 
-			<?php while(have_posts()): the_post(); ?>
+			<?php if(have_posts()): while(have_posts()): the_post(); ?>
 				<!-- CASE NCM -->
 				<?php switch (@$_GET['filtro']): case 'ncm': ?>
 				
@@ -102,7 +102,22 @@
 						break;
 						endswitch;
 					?>
-			<?php endwhile; ?>
+			<?php endwhile;else: ?>
+			<style>
+				h5{text-align: center;}
+			</style>
+				<?php switch ($filtro) {
+					case 'ncm':
+						echo "<h5 style='text-align: center'>NCM NÃO CONSTA EM NOSSA BASE DE DADOS</h5>";
+						break;
+					case 'cnae':
+						echo "<h5 style='text-align: center'>CNAE CONSULTADA NÃO CONSTA EM NOSSA BASE DE DADOS COM TRATAMENTO DIFERENCIADO OU SUJEITA AO ICMS-ST.</h5>";
+						break;
+					default:
+						# code...
+						break;
+				} ?>
+			<?php endif; ?>
 
 	</section>
 

@@ -31,7 +31,7 @@
 							<p><?php echo wp_trim_words(get_the_excerpt(), 15); ?></p>
 							<a href="<?php the_permalink(); ?>">Mais Informações</a>
 						</li>
-					<?php endwhile; ?>
+					<?php wp_reset_postdata(); endwhile;?>
 					</ul>
 				</main>
 			</section>
