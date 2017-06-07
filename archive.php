@@ -47,7 +47,7 @@
 </section>
 
 
-<?php get_template_part("templates/noticias"); ?>
-<?php get_template_part("templates/depoimentos"); ?>
-<?php get_template_part("templates/parceiros"); ?>
+<?php #get_template_part("templates/noticias"); ?>
+<?php #get_template_part("templates/depoimentos"); ?>
+<?php #get_template_part("templates/parceiros"); ?>
 <?php get_footer(); ?>	

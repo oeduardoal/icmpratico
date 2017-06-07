@@ -75,7 +75,7 @@
 			}
 		}
 		main{
-				height: 80px;
+				height: 90px;
 			p{
 				text-align: left;
 				color: $cinzap;
@@ -87,7 +87,16 @@
 				font-size: 15px;
 				color: $azul;
 			}
+			p{
+				font-weight: 600;
+			}
 			font-size: 15px;
+		}
+		p.small{
+		    height: 26px;
+			color: #5d5d5d;
+			font-size: 13px;
+			font-weight: 600;
 		}
 		button{
 			margin-top: 1em;

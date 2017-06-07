@@ -1,0 +1,28 @@
+@import 'styles';
+
+.single-curso{
+	#conteudo_programatico{
+		ul,li{
+			list-style: none;
+			margin-bottom: 1rem;
+
+		}
+		a.accordion-title{
+				background-color: #E0E9F0;
+				color: #424242;
+				font-weight: 600 !important;
+			}
+		ul.accordion-content{
+			margin: 0px;
+			padding: 1rem;
+			border: 1px solid #E0E9F0 !important;
+		}
+		ul li ul li{
+			margin-bottom: 5px;
+			color: #424242;
+		}
+		ul li ul li ul{
+			padding: 1rem;
+		}
+	}
+}

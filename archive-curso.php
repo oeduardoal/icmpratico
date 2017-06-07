@@ -16,7 +16,7 @@
 					<a href="<?php the_permalink(); ?>">
 					<article class="cursos_icms xlarge-3 large-4 medium-12 small-12 columns">
 						<?php if(has_post_thumbnail()): ?>
-							<div class="imageresize left" style="background-image: url(<?php echo thumbnail_default ?>);"></div>
+							<div class="imageresize left" style="background-image: url(<?php the_post_thumbnail_url('full'); ?>);"></div>
 						<?php else: ?>
 							<div class="imageresize left" style="background-image: url(<?php echo thumbnail_default; ?>);"></div>
 						<?php endif; ?>

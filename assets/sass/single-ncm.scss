@@ -10,8 +10,11 @@
 	.reveal#cests_modal{
 		max-width: none;
 		position: relative;
-		max-width: 60%;
-		min-width: 60%;
+	    max-width: 80%;
+	    min-width: 80%;
+	}
+	table.cests_table tbody td, table.cests_table tbody th{
+		font-size: 14px;
 	}
 	.head-table{
 		background-color: $azulh;
@@ -24,6 +27,7 @@
 				text-align: center;
 		}	
 	}
+	
 }
 .single-ncm,.post-type-archive-ncm,.search-resultados{
 	section.tree{

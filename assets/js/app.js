@@ -1,9 +1,11 @@
 (function($){
+
 	$(window).load(function(){
 		$('.loader-page').fadeOut(1000);
+
 	})
 	$(document).ready(function() {
-
+			
 			$(document).foundation();
 			console.log("Desenvolvido por Eduardo Almeida :D");
 			var slider_noticias = $('.slider-noticias').owlCarousel({
@@ -277,6 +279,27 @@
 			})
 
 			
+				var content = $("#conteudo_programatico");
+				var lista = $("#conteudo_programatico > ul");
+				var item = $("#conteudo_programatico > ul > li");
+				var item_title = $("#conteudo_programatico > ul > li > strong");
+				var item_content = $("#conteudo_programatico > ul > li > ul");
+				lista.addClass("accordion");
+				lista.attr("data-accordion", "");
+				lista.attr("role", "tablist");
+				lista.attr("data-allow-all-closed", "true");
+				item.addClass("accordion-item");
+				item.attr("data-accordion-item","");
+				item_title.addClass("accordion-title");
+				item_content.addClass("accordion-content");
+				item_content.attr("data-tab-content","");
+
+				$("#conteudo_programatico > ul > li").each(function(i){
+					var title = $(this).find("strong").text()
+					$(this).find("strong").replaceWith("<a class='accordion-title'>" + title +"</a>");
+				})
+				$("#conteudo_programatico").foundation();
+
 				$("#arquivo").change(function (e){
 			       var fileName = $(this).val();
 			       console.log(e);

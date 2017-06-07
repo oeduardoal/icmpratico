@@ -12,6 +12,13 @@
 		<main>
 			<?php the_content(); ?>
 		</main>
+
+		<?php if(get_field('conteudo_programatico')): ?>
+			<div id="conteudo_programatico">
+				<?php echo get_field('conteudo_programatico'); ?>
+			</div>
+		<?php endif; ?>
+
 	</section>
 	<?php get_sidebar('curso'); ?>
 </section>
@@ -27,24 +34,24 @@
 		<section class="articles large-4 medium-4 small-12 float-left">
 			<main>
 				<h6>PRIMEIRO LOTE</h6>
-				<small><?php echo get_field('primeiro_lote_data'); ?></small>
-				<h4>R$ <?php echo get_field('primeiro_lote_valor'); ?></h4>
+				<small><?php the_field('primeiro_lote_data', get_the_ID()); ?></small>
+				<h4>R$ <?php echo get_field('primeiro_lote_valor',  get_the_ID()); ?></h4>
 				<a href="#inscrever" class="button primary">INSCREVA-SE</a>
 			</main>
 		</section>
 		<section class="articles large-4 medium-4 small-12 float-left">
 			<main>
 				<h6>SEGUNDO LOTE</h6>
-				<small><?php echo get_field('primeiro_lote_data'); ?></small>
-				<h4>R$ <?php echo get_field('segundo_lote_valor'); ?></h4>
+				<small><?php echo get_field('primeiro_lote_data', get_the_ID()); ?></small>
+				<h4>R$ <?php echo get_field('segundo_lote_valor', get_the_ID()); ?></h4>
 				<a href="#inscrever" class="button primary">INSCREVA-SE</a>
 			</main>
 		</section>
 		<section class="articles large-4 medium-4  small-12  float-left">
 			<main>
 				<h6>TERCEIRO LOTE</h6>
-				<small><?php echo get_field('primeiro_lote_data'); ?></small>
-				<h4>R$ <?php echo get_field('terceiro_lote_valor'); ?></h4>
+				<small><?php echo get_field('terceiro_lote_data', get_the_ID()); ?></small>
+				<h4>R$ <?php echo get_field('terceiro_lote_valor', get_the_ID()); ?></h4>
 				<a href="#inscrever" class="button primary">INSCREVA-SE</a>
 			</main>
 		</section>

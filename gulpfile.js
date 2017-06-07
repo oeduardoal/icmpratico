@@ -55,6 +55,7 @@ gulp.task('sass', function(){
 gulp.task('compressjs', function (cb) {
     return gulp.src('assets/js/app.js')
       .pipe(concat('jq.min.js'))
+      // .pipe(ignoreErrors())
       .pipe(uglify())
       .pipe(gulp.dest('assets/js/m'));
 });

@@ -26,12 +26,14 @@
 										<p>Leia mais...</p>
 									</section>
 								</a>
-							
-							<button type="submit" class="button button-azulh" ng-click="clic">Visualizar todos</button>
+								<a href="#" ng-show="!ncms.length">
+									<section class="result" style="margin-bottom: 2rem">
+										<h4>NCM NÃO CONSTA EM NOSSA BASE DE DADOS</h4>
+									</section>
+								</a>
+							<button type="submit" class="button button-azulh"  ng-hide="!ncms.length" ng-click="clic">Visualizar todos</button>
 						</div>
-						<div class="content" ng-show="vazio">
-							<h4>Nada Encontrado!</h4>
-						</div>
+						
 						</section>
 				</section>
 				<span>
@@ -59,11 +61,13 @@
 										<p>Leia mais...</p>
 									</section>
 								</a>
+								<a href="#" ng-show="!ncms.length">
+									<section class="result" style="margin-bottom: 2rem">
+										<h4>CNAE CONSULTADA NÃO CONSTA EM NOSSA BASE DE DADOS COM TRATAMENTO DIFERENCIADO OU SUJEITA AO ICMS-ST.</h4>
+									</section>
+								</a>
 							
-							<button type="submit" class="button button-azulh">Visualizar todos</button>
-						</div>
-						<div class="content" ng-show="vazio">
-							<h4>Nada Encontrado!</h4>
+							<button type="submit" ng-hide="!ncms.length" class="button button-azulh">Visualizar todos</button>
 						</div>
 						</section>
 				</section>
@@ -75,7 +79,7 @@
 		<!-- Importar XML -->
 		<form action="<?php bloginfo('siteurl'); ?>/xml" method="GET">
 			<span>Importar XML</span>
-				<input type="text" placeholder="Informe o nome do XML" class="input-ncm" name="arquivo" required="">
+				<input type="text" placeholder="Informe o nome do XML" class="input-ncm" name="arquivo">
 				<span>
 					<button type="submit" class="button btn-search">Buscar</button>
 				</span>

@@ -62,9 +62,6 @@
 		// wp_enqueue_style( 'style_lightbox', assetsurl() . '/lib/lightbox/css/lightbox.min.css');
 		// wp_enqueue_script( 'script_lightbox',  assetsurl() . '/lib/lightbox/js/lightbox.min.js', array('jquery'), '',true);
 
-		// Vanilla
-		// wp_enqueue_script( 'script_vanilla',  assetsurl() . '/lib/vanillamasker/vanilla.js');
-
 		// Pace
 		wp_enqueue_style('style_loader', assetsurl() . '/lib/pace/pace.min.css' );
 		wp_enqueue_script( 'script_loader', assetsurl() . '/lib/pace/pace.min.js' );

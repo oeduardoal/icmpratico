@@ -114,4 +114,18 @@ function manage_wp_posts_be_qe_pre_get_posts( $query ) {
 	
 }
 
+function posts_columns($columns) {
+	
+	unset(
+		$columns['author'],
+		$columns['comments'],
+		$columns['categories'],
+		$columns['tags']
+	);
+    return $columns;
+}
+add_filter('manage_posts_columns' , 'posts_columns');
+add_filter('manage_artigo_posts_columns' , 'posts_columns');
+
+
 ?>

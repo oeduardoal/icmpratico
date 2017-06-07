@@ -1,6 +1,6 @@
 <section id="legislacoes">
 	<header>
-		<h1>VEJA AS LEGISLAÇÕES</h1>
+		<h1>LEGISLAÇÕES</h1>
 	</header>
 	<?php $args_l = array(  'posts_per_page' => 6,'orderby' => 'date','order' => 'DESC', 'post_type' => 'legislacao'); ?>
 	<?php $legislacoes = new WP_Query($args_l); ?>
@@ -30,7 +30,7 @@
 	<?php wp_reset_postdata(); ?>
 	<footer>
 		<a href="<?php bloginfo('siteurl') ?>/legislacao/">
-			<button class="button button-amarelo">VISUALIZAR TODOS</button>
+			<button class="button button-amarelo">VEJA MAIS</button>
 		</a>
 	</footer>
 </section>

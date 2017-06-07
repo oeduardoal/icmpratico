@@ -1,11 +1,19 @@
 <?php
-
 if(function_exists("register_field_group"))
 {
 	register_field_group(array (
 		'id' => 'acf_detalhes-curso',
 		'title' => 'Detalhes - CURSO',
 		'fields' => array (
+			array (
+				'key' => 'field_578e3225ed054',
+				'label' => 'Pagamento via Pagseguro?',
+				'name' => 'pagamento_via_pagseguro',
+				'type' => 'true_false',
+				'instructions' => 'Marque essa opção para exibição do botão de compra via Pagseguro',
+				'message' => '',
+				'default_value' => 1,
+			),
 			array (
 				'key' => 'field_5790c2471a858',
 				'label' => 'Primeiro Lote - Data',
@@ -62,7 +70,7 @@ if(function_exists("register_field_group"))
 				'first_day' => 1,
 			),
 			array (
-				'key' => 'field_5790c2bb68e7f',
+				'key' => 'field_5790c34168e83',
 				'label' => 'Terceiro Lote - Valor',
 				'name' => 'terceiro_lote_valor',
 				'type' => 'number',
@@ -201,16 +209,6 @@ if(function_exists("register_field_group"))
 				'prepend' => '',
 				'append' => '',
 			),
-			array (
-				'key' => 'field_578e8a2ec2679',
-				'label' => 'URL Para EAD',
-				'name' => 'url_ead',
-				'type' => 'text',
-				'default_value' => '',
-				'placeholder' => '',
-				'prepend' => '',
-				'append' => '',
-			),
 		),
 		'location' => array (
 			array (
@@ -223,7 +221,7 @@ if(function_exists("register_field_group"))
 				),
 			),
 		),
-			'options' => array (
+		'options' => array (
 			'position' => 'normal',
 			'layout' => 'default',
 			'hide_on_screen' => array (
@@ -232,6 +230,7 @@ if(function_exists("register_field_group"))
 		'menu_order' => 0,
 	));
 }
+
 if(function_exists("register_field_group"))
 {
 	register_field_group(array (

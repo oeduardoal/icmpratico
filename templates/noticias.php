@@ -35,6 +35,7 @@
 								</p>
 							</main>
 							<hr>
+							<p class="small">Atualizado em <?php the_modified_date(); ?><?php #the_modified_date("H:i"); ?></p>
 							<a href="<?php the_permalink(); ?>">
 								<button class="button button-azul">
 									LEIA MAIS
