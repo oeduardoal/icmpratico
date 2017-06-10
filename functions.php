@@ -198,7 +198,7 @@ function search_filter($query) {
 
 				$s = @$_GET['s'];
 				$var2 = urldecode($s);
-				$var = preg_replace('/\./', '', $var2);
+				$var = preg_replace('/[.,\/#!$%\^&\*;:{}=\-_`~()]/', '', $var2);
 
 				if(is_numeric($var)):
 

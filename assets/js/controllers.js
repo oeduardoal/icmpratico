@@ -17,10 +17,14 @@ app.controller('main', ['$scope', '$http','$timeout','GETAPI',function($scope,$h
 		});
 		
 	}
+	
 	$scope.submit = function(){
 		if($scope.input.length >= 8){
-			console.log('8 NUMEROS');
-			window.location = document.location.origin + "/" + $scope.input;
+			if(!$scope.ncms.length){
+			}else{
+				console.log('8 NUMEROS');
+				window.location = document.location.origin + "/" + $scope.input.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, '');
+			}
 		}else{
 			window.location = document.location.origin + "?filtro=" + $scope.filtro + "&" + "s=" + $scope.input;
 			$scope.method = "GET";

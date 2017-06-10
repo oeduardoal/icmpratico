@@ -11,6 +11,8 @@
 			<header>
 				<h1><b>CURSOS</b> ICMS PRÁTICO</h1>
 			</header>
+			<?php global $wp_query; $page_is = (get_query_var('paged')) ? get_query_var('paged') : 1 ; ?>
+				<?php $total = $wp_query->max_num_pages;  ?>
 				<div class="row" >
 				<?php while (have_posts()): the_post(); ?>
 					<a href="<?php the_permalink(); ?>">
@@ -37,6 +39,13 @@
 			<?php wp_reset_postdata(); ?>
 
 			</div>
+			<?php if ($wp_query->max_num_pages > 1) { ?>
+			<div class="callout primary text-center">
+				Você em está <?php echo $page_is; ?> de <?php echo $total; ?> páginas <br/>
+				<?php echo get_previous_posts_link( '<i class="fa fa-arrow-left" aria-hidden="true"></i> Anterior ' ); ?>
+				<?php echo get_next_posts_link( 'Próximo <i class="fa fa-arrow-right" aria-hidden="true"></i> '); ?>
+			</div>
+			<?php } ?>
 			</section>
 		</section>
 </section>

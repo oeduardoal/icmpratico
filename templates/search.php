@@ -47,7 +47,7 @@
 			<span>Consulte a CNAE-ST</span>
 				<section class="input-results">
 				<input type="hidden" ng-model="filtro" ng-change="getncms()" ng-value="'cnae'" name="filtro" />
-					<input type="text" placeholder="digite a CNAE desejada" ng-model="input" ng-change="getcnaes()" ng-delay="500"  class="input-ncm" name="s" required="">
+					<input type="text" placeholder="digite a CNAE desejada" ng-model="input" ng-change="getcnaes()" ng-delay="500"  class="input-ncm" name="s" required="" ui-mask="/[.,\/#!$%\^&\*;:{}=\-_`~()]/">
 					<section class="results" ng-show="input">
 						<picture ng-show="!ncms">
 							<h4>Procurando ...</h4>
