@@ -76,24 +76,30 @@
 
 	var $lista = jQuery('.input-select').select2({
 		ajax: {
-		    url: domain + "/wp-json/wp/v2/ncm",
+			url: domain + "/wp-json/wp/v2/ncm",
 			dataType: 'json',
 			delay: 300,
 			data: function (params) {
 				return {
 					search: params.term,
+					page: params.page
 				};
 			},
-			processResults: function (data) {
-	            return {
-	                results: data
-	            }
-	        }
-	     },
-	     minimumInputLength: 1,
-	    escapeMarkup: function (markup) { return markup; }, // let our custom formatter work
-	     templateResult: formatRepo, 
-  templateSelection: formatRepoSelection
+			processResults: function (data,params) {
+				params.page = params.page || 1;
+				console.log(params.page);
+					return {
+						results: data,
+						pagination: {
+						more: (params.page * 5) < 100000000
+					}
+				}
+			}
+	    },
+		minimumInputLength: 1,
+		escapeMarkup: function (markup) { return markup; },
+		templateResult: formatRepo, 
+		templateSelection: formatRepoSelection
 
 	});
 	for (var d = 0; d < selections.length; d++) {

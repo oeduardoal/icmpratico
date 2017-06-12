@@ -101,6 +101,7 @@
 								ON $wpdb->posts.ID = $wpdb->postmeta.post_id
 								WHERE ($wpdb->posts.post_title LIKE '$var%'
 								AND $wpdb->posts.post_type = 'ncm'
+								AND $wpdb->posts.post_parent <> 0
 								AND $wpdb->posts.post_status = 'publish')
 								GROUP BY $wpdb->posts.ID
 								LIMIT 10
@@ -113,6 +114,7 @@
 								ON $wpdb->posts.ID = $wpdb->postmeta.post_id
 								WHERE ($wpdb->posts.post_title LIKE '%$var%'
 								AND $wpdb->posts.post_type = 'ncm'
+								AND $wpdb->posts.post_parent <> 0
 								AND $wpdb->posts.post_status = 'publish')
 								GROUP BY $wpdb->posts.ID
 								LIMIT 10

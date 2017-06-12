@@ -406,3 +406,42 @@ if(function_exists("register_field_group"))
 		'menu_order' => 0,
 	));
 }
+if(function_exists("register_field_group"))
+{
+	register_field_group(array (
+		'id' => 'acf_observacao',
+		'title' => 'Observação',
+		'fields' => array (
+			array (
+				'key' => 'field_562e69788b31c',
+				'label' => 'Alíquota',
+				'name' => 'aliquota',
+				'type' => 'text',
+				'default_value' => '',
+				'placeholder' => '',
+				'prepend' => '',
+				'append' => '',
+				'formatting' => 'html',
+				'maxlength' => '',
+			),
+		),
+		'location' => array (
+			array (
+				array (
+					'param' => 'post_type',
+					'operator' => '==',
+					'value' => 'observacao',
+					'order_no' => 0,
+					'group_no' => 0,
+				),
+			),
+		),
+		'options' => array (
+			'position' => 'normal',
+			'layout' => 'no_box',
+			'hide_on_screen' => array (
+			),
+		),
+		'menu_order' => 0,
+	));
+}

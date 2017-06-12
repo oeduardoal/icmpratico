@@ -209,7 +209,7 @@ function search_filter($query) {
 						$where = " AND post_title LIKE '$var%'";
 
 						// OBS
-						// $where .= " AND post_parent <> 0";
+						$where .= " AND post_parent <> 0";
 
 
 					}elseif($filtro == "cnae"){
@@ -239,6 +239,7 @@ function search_filter($query) {
 
 					// Para letras ...
 					$where = " AND post_title LIKE '%$var%' ";
+					$where .= " AND post_parent <> 0";
 
 					// E ainda, para mostrar apenas as ncms com o post_parent, ou seja vinculadas...
 					if(@$_GET['filtro'] == 'ncm'):

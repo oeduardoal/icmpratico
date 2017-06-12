@@ -1,7 +1,6 @@
 <?php get_header(); ?>
 <?php get_template_part('templates/header') ?>
 
-
 <section class="row expanded">
 		<section id="content" class="large-12 float-left page page-id-<?php the_ID(); ?>">
 			<?php get_template_part("templates/breadcrumbs"); ?>
